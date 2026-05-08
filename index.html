@@ -8,25 +8,22 @@
 
   <meta
     name="description"
-    content="Ronny Trubadur – kjente låter og guilty pleasures levert med full pakke."
+    content="Ronny Trubadur – kjente låter og guilty pleasures levert som full livepakke med lyd og lys inkludert."
   />
 
   <meta property="og:title" content="Ronny Trubadur" />
   <meta
     property="og:description"
-    content="Kjente låter og guilty pleasures levert med full pakke."
+    content="Kjente låter og guilty pleasures levert som full livepakke."
   />
-
   <meta property="og:image" content="bilde1.PNG" />
   <meta property="og:type" content="website" />
 
   <link rel="icon" href="logo.png" />
 
   <style>
-
     :root{
       --dark:#090806;
-      --dark2:#120f0c;
       --gold:#c89a52;
       --goldLight:#e7c07c;
       --text:#f4eee7;
@@ -55,17 +52,11 @@
       content:"";
       position:fixed;
       inset:0;
-
       background:
         linear-gradient(to bottom, rgba(0,0,0,0.58), rgba(9,8,6,0.96)),
         url("bilde1.PNG") center center / cover no-repeat;
-
       background-attachment:fixed;
-
-      filter:
-        saturate(0.9)
-        contrast(1.08);
-
+      filter:saturate(0.9) contrast(1.08);
       z-index:-2;
     }
 
@@ -73,11 +64,9 @@
       content:"";
       position:fixed;
       inset:0;
-
       background:
         radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.28) 50%, rgba(0,0,0,0.88) 100%),
         radial-gradient(circle at top, rgba(200,154,82,0.12), transparent 35%);
-
       pointer-events:none;
       z-index:-1;
     }
@@ -95,7 +84,6 @@
       position:relative;
       z-index:2;
       max-width:980px;
-
       animation:fadeUp 1s ease both;
     }
 
@@ -103,9 +91,7 @@
       width:min(88vw,560px);
       max-height:42vh;
       object-fit:contain;
-
       margin-bottom:28px;
-
       filter:drop-shadow(0 24px 45px rgba(0,0,0,0.82));
     }
 
@@ -114,33 +100,24 @@
       line-height:1.08;
       font-weight:850;
       letter-spacing:-0.04em;
-
       max-width:850px;
       margin:0 auto 18px;
-
       color:#fff7eb;
-
       text-shadow:0 12px 35px rgba(0,0,0,0.75);
     }
 
     .package-line{
       color:var(--goldLight);
-
       font-size:clamp(1rem,2.1vw,1.3rem);
       font-weight:700;
-
       margin-bottom:28px;
     }
 
     .artists{
       max-width:900px;
-
       margin:0 auto 34px;
-
       color:#d8ccbd;
-
       line-height:1.8;
-
       font-size:clamp(0.95rem,1.8vw,1.08rem);
     }
 
@@ -148,57 +125,38 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-
       min-height:56px;
-
       padding:0 34px;
-
       border-radius:999px;
-
       text-decoration:none;
-
       font-weight:850;
       letter-spacing:0.02em;
-
-      background:
-        linear-gradient(135deg,#e2b86e,#b47b35);
-
+      background:linear-gradient(135deg,#e2b86e,#b47b35);
       color:#140d06;
-
-      box-shadow:
-        0 18px 50px rgba(200,154,82,0.28);
-
+      box-shadow:0 18px 50px rgba(200,154,82,0.28);
       transition:0.25s ease;
     }
 
     .btn:hover{
       transform:translateY(-3px);
-
-      box-shadow:
-        0 24px 65px rgba(200,154,82,0.42);
+      box-shadow:0 24px 65px rgba(200,154,82,0.42);
     }
 
     .value-line{
       margin-top:34px;
-
       color:#c8bbab;
-
       font-size:clamp(0.96rem,1.8vw,1.1rem);
     }
 
     .section{
       position:relative;
       z-index:2;
-
       padding:85px 20px;
-
       background:
         linear-gradient(to bottom,
         rgba(9,8,6,0.74),
         rgba(18,15,12,0.92));
-
       backdrop-filter:blur(10px);
-
       border-top:1px solid rgba(255,255,255,0.05);
     }
 
@@ -209,45 +167,31 @@
 
     .section h2{
       font-size:clamp(1.5rem,4vw,2.5rem);
-
       margin-bottom:24px;
-
       color:var(--goldLight);
-
       letter-spacing:-0.03em;
     }
 
     .section p{
       color:var(--muted);
-
       line-height:1.9;
-
       font-size:1.05rem;
     }
 
     .price{
       margin:26px 0 12px;
-
       font-size:clamp(2rem,6vw,3.5rem);
-
       font-weight:900;
-
       color:var(--goldLight);
-
       letter-spacing:-0.05em;
     }
 
     .phone{
       display:block;
-
       margin-top:26px;
-
       color:#fff2df;
-
       text-decoration:none;
-
       font-size:1.35rem;
-
       font-weight:850;
     }
 
@@ -258,22 +202,15 @@
     footer{
       position:relative;
       z-index:2;
-
       padding:34px 20px;
-
       text-align:center;
-
       background:#080706;
-
       border-top:1px solid rgba(255,255,255,0.06);
-
       color:#807364;
-
       font-size:0.9rem;
     }
 
     @keyframes fadeUp{
-
       from{
         opacity:0;
         transform:translateY(24px);
@@ -283,11 +220,9 @@
         opacity:1;
         transform:translateY(0);
       }
-
     }
 
     @media(max-width:700px){
-
       body::before{
         background-attachment:scroll;
         background-position:center top;
@@ -300,7 +235,6 @@
       .logo{
         width:94vw;
         max-height:34vh;
-
         margin-bottom:24px;
       }
 
@@ -312,9 +246,7 @@
         width:100%;
         max-width:330px;
       }
-
     }
-
   </style>
 </head>
 
@@ -331,7 +263,7 @@
       />
 
       <div class="mainline">
-        Kjente låter og guilty pleasures levert med full pakke.
+        Kjente låter og guilty pleasures levert som full livepakke.
       </div>
 
       <div class="package-line">
@@ -373,7 +305,7 @@
       <br>
 
       <p>
-        Ronny Trubadur leverer komplett livepakke med profesjonelt lyd- og lysanlegg inkludert.
+        Ronny Trubadur leverer en komplett livepakke med profesjonelt lyd- og lysanlegg inkludert.
       </p>
 
       <div class="price">
@@ -381,7 +313,7 @@
       </div>
 
       <p>
-        Passer perfekt for puber, firmafester og arrangementer hvor musikken skal skape stemning.
+        Passer godt for puber, firmafester og arrangementer der musikken skal skape stemning.
       </p>
 
       <a
@@ -409,13 +341,13 @@
       <h2>Om Ronny</h2>
 
       <p>
-        Ronny Trubadur holder til i Trondheim/Aure og har lang erfaring fra scena som trubadur, duo og bandmusiker.
+        Ronny Trubadur holder til i Trondheim/Aure og har lang erfaring fra scenen som trubadur, duo- og bandmusiker.
       </p>
 
       <br>
 
       <p>
-        Med bakgrunn fra både akustiske konserter, pubscener og større arrangement leveres kjente låter, guilty pleasures og god stemning med både akustisk og elektrisk gitar.
+        Med erfaring fra akustiske konserter, pubscener og større arrangementer leverer han kjente låter, guilty pleasures og god stemning med både akustisk og elektrisk gitar.
       </p>
 
       <br>

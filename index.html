@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Ronny Trubadur | Livemusikk med rockesjel</title>
+  <title>Ronny Trubadur | Livemusikk</title>
+
   <meta
     name="description"
-    content="Trubadur med rockesjel og altfor mange guilty pleasures. Allsang, trøkk og låter folk faktisk synger med på."
+    content="Trubadur med rockesjel og altfor mange guilty pleasures."
   />
 
   <meta property="og:title" content="Ronny Trubadur" />
   <meta
     property="og:description"
-    content="Allsang, trøkk og låter folk faktisk synger med på."
+    content="Allsang. Trøkk. Låter folk faktisk synger med på."
   />
-  <meta property="og:image" content="bilde1.png" />
-  <meta property="og:type" content="website" />
+  <meta property="og:image" content="bilde1.PNG" />
 
   <link rel="icon" href="logo.png" />
 
@@ -29,7 +29,7 @@
 
     body {
       background: #0d0d0d;
-      color: #f5f5f5;
+      color: white;
       font-family: Arial, Helvetica, sans-serif;
       overflow-x: hidden;
     }
@@ -49,13 +49,13 @@
       content: "";
       position: absolute;
       inset: 0;
-      background-image:
-        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)),
-        url("bilde1.png");
+      background:
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.85)),
+        url("bilde1.PNG");
       background-size: cover;
       background-position: center top;
-      filter: saturate(1.1);
       transform: scale(1.03);
+      filter: saturate(1.05);
     }
 
     .content {
@@ -69,47 +69,45 @@
       width: 170px;
       max-width: 70%;
       margin-bottom: 28px;
-      filter: drop-shadow(0 0 20px rgba(255,140,0,0.25));
     }
 
     h1 {
       font-size: clamp(3rem, 8vw, 6rem);
-      letter-spacing: 2px;
       text-transform: uppercase;
+      letter-spacing: 2px;
       margin-bottom: 20px;
       color: #ff8c00;
-      text-shadow: 0 0 18px rgba(255,140,0,0.25);
+      text-shadow: 0 0 18px rgba(255,140,0,0.2);
     }
 
     .artists {
-      font-size: clamp(1rem, 2vw, 1.35rem);
+      font-size: clamp(1rem, 2vw, 1.3rem);
       line-height: 1.8;
-      color: #d7d7d7;
-      margin-bottom: 30px;
+      color: #d5d5d5;
+      margin-bottom: 28px;
     }
 
     .tagline {
-      font-size: clamp(1.4rem, 3vw, 2.1rem);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
       font-weight: bold;
-      color: white;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .subline {
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      color: #bbbbbb;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #bdbdbd;
       margin-bottom: 40px;
     }
 
     .buttons {
       display: flex;
-      gap: 18px;
       justify-content: center;
+      gap: 18px;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 16px 32px;
+      padding: 16px 30px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: bold;
@@ -123,12 +121,12 @@
     }
 
     .btn-main:hover {
-      transform: translateY(-2px);
       background: #ffa733;
+      transform: translateY(-2px);
     }
 
     .btn-secondary {
-      border: 2px solid #ffffff33;
+      border: 2px solid rgba(255,255,255,0.18);
       color: white;
       background: rgba(255,255,255,0.05);
     }
@@ -139,8 +137,6 @@
     }
 
     .footer {
-      position: relative;
-      z-index: 2;
       margin-top: 50px;
       color: #8d8d8d;
       font-size: 0.95rem;
@@ -159,9 +155,6 @@
     }
 
     @media (max-width: 700px) {
-      .hero {
-        padding-top: 60px;
-      }
 
       .logo {
         width: 130px;
@@ -176,6 +169,10 @@
         width: 100%;
         max-width: 320px;
       }
+
+      .artists {
+        line-height: 1.6;
+      }
     }
   </style>
 </head>
@@ -183,6 +180,7 @@
 <body>
 
   <section class="hero">
+
     <div class="content">
 
       <img src="logo.png" alt="Ronny Trubadur logo" class="logo" />
@@ -198,24 +196,27 @@
       </div>
 
       <div class="subline">
-        Allsang, trøkk og låter folk ikke visste de savnet.
+        Allsang. Trøkk. Låter folk faktisk synger med på.
       </div>
 
       <div class="buttons">
+
         <a class="btn btn-main" href="tel:+4741357603">
-          Ring for booking
+          Book live musikk
         </a>
 
         <a class="btn btn-secondary" href="mailto:booking@ronnytrubadur.no">
           Send forespørsel
         </a>
+
       </div>
 
       <div class="footer">
-        3 x 45 minutter • Eget lyd- og lysanlegg • Pub • Event • Privatfest
+        Pub • Firmafest • Bryllup • Privatfest • Eget lyd- og lysanlegg
       </div>
 
     </div>
+
   </section>
 
 </body>

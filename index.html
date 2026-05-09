@@ -2,11 +2,12 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Ronny Trubadur | Kontakt / booking</title>
+  <title>Ronny Trubadur | Live musikk & booking</title>
 
-  <meta name="description" content="Ronny Trubadur – kjente låter, live energi og et repertoar bygget for god stemning." />
+  <meta name="description" content="Ronny Trubadur – live musikk med rockesjel, stemning og kjente låter." />
+
   <meta property="og:title" content="Ronny Trubadur" />
   <meta property="og:description" content="Kjente låter, live energi og god stemning." />
   <meta property="og:image" content="banner.PNG" />
@@ -15,13 +16,17 @@
   <link rel="icon" href="logo.png" />
 
   <style>
+
     :root{
-      --gold:#d7a45b;
-      --goldLight:#efcb8d;
-      --text:#f6f0e8;
-      --muted:#d4c5b3;
-      --glass:rgba(16,13,10,0.58);
-      --border:rgba(239,203,141,0.14);
+      --bg:#060606;
+      --panel:rgba(14,14,14,0.72);
+      --border:rgba(255,255,255,0.08);
+
+      --text:#f3f3f3;
+      --muted:#bdbdbd;
+
+      --silver:#d7d7d7;
+      --silver2:#8f8f8f;
     }
 
     *{
@@ -35,20 +40,32 @@
     }
 
     body{
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color:var(--text);
-      overflow-x:hidden;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
       background:#000;
+      color:var(--text);
+
+      overflow-x:hidden;
     }
 
     body::before{
       content:"";
       position:fixed;
       inset:0;
+
       background:
-        linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.42)),
-        url("bilde1.PNG") center center / cover no-repeat;
-      background-attachment:fixed;
+        linear-gradient(
+          rgba(0,0,0,0.72),
+          rgba(0,0,0,0.84)
+        ),
+        url("bilde1.PNG")
+        center center / cover no-repeat;
+
       z-index:-2;
     }
 
@@ -56,198 +73,240 @@
       content:"";
       position:fixed;
       inset:0;
+
       background:
-        radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.42) 100%);
+        radial-gradient(
+          circle at center,
+          transparent 10%,
+          rgba(0,0,0,0.48) 100%
+        );
+
       z-index:-1;
-      pointer-events:none;
     }
 
     .hero{
       min-height:100vh;
+
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:42px 18px 70px;
+
+      padding:40px 18px 80px;
     }
 
-    .hero-content{
+    .hero-inner{
       width:100%;
-      max-width:1180px;
-      text-align:center;
-      animation:fadeUp 1s ease both;
+      max-width:1200px;
+
+      animation:fadeUp 1s ease;
     }
 
     .banner{
       width:100%;
-      max-width:1120px;
-      display:block;
-      margin:0 auto 34px;
-      border-radius:18px;
+      border-radius:24px;
+
+      margin-bottom:30px;
+
       border:1px solid rgba(255,255,255,0.08);
-      box-shadow:0 25px 70px rgba(0,0,0,0.48);
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,0.55);
     }
 
-    .glass-box{
-      background:var(--glass);
+    .glass{
+      background:var(--panel);
+
       backdrop-filter:blur(10px);
+
       border:1px solid var(--border);
+
       border-radius:28px;
-      padding:40px 34px;
-      box-shadow:0 18px 50px rgba(0,0,0,0.32);
+
+      padding:42px 32px;
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.4);
     }
 
-    .mainline{
-      font-size:clamp(1.9rem,4vw,3.8rem);
-      line-height:1.05;
-      font-weight:900;
+    h1{
+      font-size:
+        clamp(2.2rem,6vw,5rem);
+
+      line-height:1;
+
       letter-spacing:-0.05em;
-      color:#fff7ee;
-      margin-bottom:26px;
-      text-shadow:0 8px 30px rgba(0,0,0,0.45);
+
+      margin-bottom:24px;
     }
 
-    .artists-box{
-      margin-top:28px;
-    }
+    .lead{
+      color:#d8d8d8;
 
-    .artists{
-      color:#eadfce;
-      line-height:1.95;
-      font-size:clamp(0.96rem,1.8vw,1.08rem);
+      line-height:1.9;
+
+      font-size:1.08rem;
+
+      max-width:760px;
     }
 
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      min-height:58px;
-      padding:0 36px;
+
+      margin-top:34px;
+
+      min-height:60px;
+
+      padding:0 34px;
+
       border-radius:999px;
+
       text-decoration:none;
-      font-weight:850;
-      background:linear-gradient(135deg,#efcb8d,#b97b31);
-      color:#140d06;
-      box-shadow:0 18px 40px rgba(215,164,91,0.35);
+
+      font-weight:900;
+
+      color:#050505;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f3f3f3,
+          #9d9d9d
+        );
+
       transition:0.25s ease;
+
+      box-shadow:
+        0 16px 40px rgba(255,255,255,0.12);
     }
 
     .btn:hover{
       transform:translateY(-3px);
-      box-shadow:0 24px 60px rgba(215,164,91,0.5);
-    }
-
-    .value-line{
-      margin-top:30px;
-      color:#e4d6c5;
-      line-height:1.8;
-      font-size:1rem;
     }
 
     .section{
-      padding:34px 18px;
+      padding:0 18px 34px;
     }
 
     .container{
-      max-width:950px;
+      max-width:1200px;
       margin:0 auto;
     }
 
     .section-box{
-      background:var(--glass);
-      backdrop-filter:blur(10px);
+      background:var(--panel);
+
       border:1px solid var(--border);
+
       border-radius:28px;
-      padding:42px 34px;
-      box-shadow:0 18px 50px rgba(0,0,0,0.28);
+
+      backdrop-filter:blur(10px);
+
+      padding:40px 30px;
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.35);
     }
 
-    .section h2{
-      font-size:clamp(1.5rem,4vw,2.5rem);
-      margin-bottom:24px;
-      color:var(--goldLight);
+    h2{
+      font-size:
+        clamp(1.6rem,4vw,3rem);
+
+      margin-bottom:26px;
+
       letter-spacing:-0.03em;
     }
 
-    .section p{
+    p{
       color:var(--muted);
-      line-height:1.95;
-      font-size:1.06rem;
-    }
 
-    .price-text{
-      margin-top:24px;
-      color:#f1cb84;
-      font-weight:700;
+      line-height:1.95;
+
+      font-size:1.04rem;
     }
 
     .gallery{
       display:grid;
-      grid-template-columns:repeat(2, 1fr);
-      gap:18px;
-      margin-top:24px;
+
+      grid-template-columns:
+        repeat(auto-fit,minmax(240px,1fr));
+
+      gap:22px;
+
+      margin-top:34px;
     }
 
     .gallery img{
       width:100%;
-      height:100%;
-      max-height:560px;
-      object-fit:cover;
-      border-radius:18px;
-      border:1px solid rgba(239,203,141,0.16);
-      box-shadow:0 18px 45px rgba(0,0,0,0.35);
+
+      border-radius:22px;
+
+      border:1px solid rgba(255,255,255,0.08);
+
+      transition:0.35s ease;
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,0.45);
     }
 
-    .booking-btn{
-      margin-top:28px;
+    .gallery img:hover{
+      transform:scale(1.02);
+    }
+
+    .price{
+      margin-top:24px;
+
+      color:#efefef;
+
+      font-size:1.25rem;
+
+      font-weight:800;
     }
 
     footer{
-      padding:34px 20px 50px;
+      padding:40px 20px 60px;
+
       text-align:center;
-      color:#d2c3b0;
-      font-size:0.92rem;
+
+      color:#9a9a9a;
     }
 
     @keyframes fadeUp{
+
       from{
         opacity:0;
-        transform:translateY(25px);
+        transform:translateY(20px);
       }
 
       to{
         opacity:1;
         transform:translateY(0);
       }
+
     }
 
     @media(max-width:700px){
-      body::before{
-        background-attachment:scroll;
-      }
 
       .hero{
-        padding:22px 12px 50px;
+        padding:18px 12px 50px;
       }
 
-      .glass-box,
+      .glass,
       .section-box{
-        padding:28px 22px;
-        border-radius:22px;
+        padding:28px 20px;
       }
 
       .banner{
-        border-radius:12px;
+        border-radius:18px;
       }
 
       .btn{
         width:100%;
-        max-width:320px;
       }
 
-      .gallery{
-        grid-template-columns:1fr;
-      }
     }
+
   </style>
 </head>
 
@@ -255,117 +314,31 @@
 
   <section class="hero">
 
-    <div class="hero-content">
+    <div class="hero-inner">
 
-      <img src="banner.PNG" alt="Ronny Trubadur banner" class="banner" />
+      <img
+        src="banner.PNG"
+        alt="Ronny Trubadur"
+        class="banner"
+      />
 
-      <div class="glass-box">
+      <div class="glass">
 
-        <div class="mainline">
-          Kjente låter, live energi og et repertoar bygget for god stemning.
-        </div>
+        <h1>
+          Ronny Trubadur
+        </h1>
 
-        <a href="mailto:ronny.nilsen.studio@gmail.com" class="btn">
+        <p class="lead">
+          Trubadur med rockesjel, live energi og et repertoar fullt av kjente låter,
+          allsang og guilty pleasures.
+        </p>
+
+        <a
+          href="mailto:ronny.nilsen.studio@gmail.com"
+          class="btn"
+        >
           Kontakt / booking
         </a>
-
-        <div class="value-line">
-          Full pakke med lyd, lys, allsang og et par låter du ikke trodde du kunne teksten på.
-        </div>
-
-      </div>
-
-      <div class="glass-box artists-box">
-
-        <div class="artists">
-          Stage Dolls • Bruce Springsteen • Sie Gubba • Dolly Parton • Elvis • Johnny Cash • ABBA • Creedence Clearwater Revival • Metallica • Journey • Bon Jovi • Dumdum Boys • Tom Petty • Oasis • Åge Aleksandersen m.m.
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="section">
-
-    <div class="container">
-
-      <div class="section-box">
-
-        <h2>Veiledende pris</h2>
-
-        <p>
-          Pris varierer etter type arrangement, spilletid, reisevei og teknisk behov.
-        </p>
-
-        <br>
-
-        <p>
-          Ronny Trubadur leverer en komplett livepakke med profesjonelt lyd- og lysanlegg inkludert.
-        </p>
-
-        <p class="price-text">
-          Fra 6 000,-
-        </p>
-
-        <br>
-
-        <p>
-          Passer godt for puber, firmafester og arrangementer der musikken skal skape stemning.
-        </p>
-
-        <br>
-
-        <p>
-          Tlf: 41 35 76 03
-        </p>
-
-        <a href="mailto:ronny.nilsen.studio@gmail.com" class="btn booking-btn">
-          Kontakt / booking
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="section">
-
-    <div class="container">
-
-      <div class="section-box">
-
-        <h2>Om Ronny</h2>
-
-        <p>
-          Ronny Trubadur holder til i Trondheim/Aure og har lang erfaring fra scenen som trubadur, duo- og bandmusiker.
-        </p>
-
-        <br>
-
-        <p>
-          Rock, pop, country, blues og norske favoritter – fra 50-tallet og frem til i dag.
-        </p>
-
-        <br>
-
-        <p>
-          Musikkvalget tilpasses alltid etter stemningen gjennom kvelden.
-        </p>
-
-        <br>
-
-        <p>
-          Gjennom årene har han bygget opp et variert repertoar.
-        </p>
-
-        <br>
-
-        <p>
-          Guilty pleasures og tørre vitser sniker seg ofte inn i løpet av kvelden.
-        </p>
 
       </div>
 
@@ -382,11 +355,78 @@
         <h2>Bilder</h2>
 
         <div class="gallery">
-          <img src="ronny1.PNG" alt="Ronny Trubadur bilde 1">
-          <img src="ronny2.jpg" alt="Ronny Trubadur bilde 2">
-          <img src="ronny3.PNG" alt="Ronny Trubadur bilde 3">
-          <img src="ronny4.PNG" alt="Ronny Trubadur bilde 4">
+
+          <img src="ronny1.PNG" alt="Ronny Trubadur">
+
+          <img src="ronny2.PNG" alt="Ronny Trubadur">
+
+          <img src="ronny3.PNG" alt="Ronny Trubadur">
+
+          <img src="ronny4.PNG" alt="Ronny Trubadur">
+
         </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-box">
+
+        <h2>Om Ronny</h2>
+
+        <p>
+          Ronny Trubadur spiller rock, pop, country, blues og norske favoritter
+          fra flere tiår – alltid tilpasset stemningen i rommet.
+        </p>
+
+        <br>
+
+        <p>
+          Med erfaring fra scene, duo og band leveres komplette liveopplevelser
+          med profesjonelt lyd- og lysanlegg.
+        </p>
+
+        <br>
+
+        <p>
+          Perfekt for puber, firmafester, arrangementer og kvelder der musikken
+          skal skape stemning.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="section-box">
+
+        <h2>Booking</h2>
+
+        <p>
+          Pris varierer etter arrangement, spilletid og reisevei.
+        </p>
+
+        <div class="price">
+          Fra 6 000,-
+        </div>
+
+        <a
+          href="mailto:ronny.nilsen.studio@gmail.com"
+          class="btn"
+        >
+          Send forespørsel
+        </a>
 
       </div>
 

@@ -7,21 +7,27 @@
   <title>Ronny Trubadur | Kontakt / booking</title>
 
   <meta name="description" content="Ronny Trubadur – trubadur med rockesjel og altfor mange guilty pleasures." />
+
   <meta property="og:title" content="Ronny Trubadur" />
   <meta property="og:description" content="Kjente låter, live stemning og guilty pleasures." />
   <meta property="og:image" content="banner.PNG" />
+  <meta property="og:type" content="website" />
 
   <link rel="icon" href="logo.png" />
 
   <style>
 
     :root{
-      --gold:#d8a55a;
-      --goldLight:#efc986;
+      --gold:#d7a45b;
+      --goldLight:#efcb8d;
       --text:#f6f0e8;
-      --muted:#d6c7b5;
-      --glass:rgba(15,12,10,0.58);
-      --border:rgba(239,201,134,0.14);
+      --muted:#d4c5b3;
+
+      --glass:
+        rgba(16,13,10,0.58);
+
+      --border:
+        rgba(239,203,141,0.14);
     }
 
     *{
@@ -35,9 +41,17 @@
     }
 
     body{
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
       color:var(--text);
+
       overflow-x:hidden;
+
       background:#000;
     }
 
@@ -45,10 +59,18 @@
       content:"";
       position:fixed;
       inset:0;
+
       background:
-        linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.45)),
-        url("bilde1.PNG") center center / cover no-repeat;
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.18),
+          rgba(0,0,0,0.42)
+        ),
+        url("bilde1.PNG")
+        center center / cover no-repeat;
+
       background-attachment:fixed;
+
       z-index:-2;
     }
 
@@ -56,88 +78,146 @@
       content:"";
       position:fixed;
       inset:0;
+
       background:
-        radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.45) 100%);
+        radial-gradient(
+          circle at center,
+          transparent 20%,
+          rgba(0,0,0,0.42) 100%
+        );
+
       z-index:-1;
+
       pointer-events:none;
     }
 
     .hero{
       min-height:100vh;
+
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:40px 18px 70px;
+
+      padding:42px 18px 70px;
     }
 
     .hero-content{
       width:100%;
       max-width:1180px;
+
       text-align:center;
+
       animation:fadeUp 1s ease both;
     }
 
     .banner{
       width:100%;
       max-width:1120px;
+
       display:block;
+
       margin:0 auto 34px;
+
       border-radius:18px;
-      box-shadow:0 25px 70px rgba(0,0,0,0.45);
-      border:1px solid rgba(255,255,255,0.08);
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      box-shadow:
+        0 25px 70px rgba(0,0,0,0.48);
     }
 
     .glass-box{
       background:var(--glass);
+
       backdrop-filter:blur(10px);
-      border:1px solid var(--border);
-      border-radius:26px;
-      padding:38px 32px;
-      box-shadow:0 18px 50px rgba(0,0,0,0.32);
+
+      border:
+        1px solid var(--border);
+
+      border-radius:28px;
+
+      padding:40px 34px;
+
+      box-shadow:
+        0 18px 50px rgba(0,0,0,0.32);
     }
 
     .mainline{
-      font-size:clamp(1.9rem,4vw,3.7rem);
-      line-height:1.06;
+      font-size:
+        clamp(1.9rem,4vw,3.8rem);
+
+      line-height:1.05;
+
       font-weight:900;
+
       letter-spacing:-0.05em;
+
       color:#fff7ee;
+
       margin-bottom:26px;
-      text-shadow:0 6px 25px rgba(0,0,0,0.45);
+
+      text-shadow:
+        0 8px 30px rgba(0,0,0,0.45);
+    }
+
+    .artists-box{
+      margin-top:28px;
     }
 
     .artists{
-      max-width:900px;
-      margin:0 auto 32px;
       color:#eadfce;
-      line-height:1.9;
-      font-size:clamp(0.96rem,1.8vw,1.08rem);
+
+      line-height:1.95;
+
+      font-size:
+        clamp(0.96rem,1.8vw,1.08rem);
     }
 
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
+
       min-height:58px;
+
       padding:0 36px;
+
       border-radius:999px;
+
       text-decoration:none;
+
       font-weight:850;
-      background:linear-gradient(135deg,#efc986,#b77931);
+
+      background:
+        linear-gradient(
+          135deg,
+          #efcb8d,
+          #b97b31
+        );
+
       color:#140d06;
-      box-shadow:0 18px 40px rgba(216,165,90,0.35);
+
+      box-shadow:
+        0 18px 40px rgba(215,164,91,0.35);
+
       transition:0.25s ease;
     }
 
     .btn:hover{
       transform:translateY(-3px);
-      box-shadow:0 24px 60px rgba(216,165,90,0.5);
+
+      box-shadow:
+        0 24px 60px rgba(215,164,91,0.5);
     }
 
     .value-line{
       margin-top:30px;
+
       color:#e4d6c5;
+
       line-height:1.8;
+
       font-size:1rem;
     }
 
@@ -146,44 +226,64 @@
     }
 
     .container{
-      max-width:900px;
+      max-width:950px;
       margin:0 auto;
     }
 
     .section-box{
       background:var(--glass);
+
       backdrop-filter:blur(10px);
-      border:1px solid var(--border);
-      border-radius:26px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:28px;
+
       padding:42px 34px;
-      box-shadow:0 18px 50px rgba(0,0,0,0.28);
+
+      box-shadow:
+        0 18px 50px rgba(0,0,0,0.28);
     }
 
     .section h2{
-      font-size:clamp(1.5rem,4vw,2.4rem);
+      font-size:
+        clamp(1.5rem,4vw,2.5rem);
+
       margin-bottom:24px;
+
       color:var(--goldLight);
+
       letter-spacing:-0.03em;
     }
 
     .section p{
       color:var(--muted);
+
       line-height:1.95;
+
       font-size:1.06rem;
     }
 
     .price-text{
       margin-top:24px;
-      color:#f1c981;
+
+      color:#f1cb84;
+
       font-weight:700;
     }
 
     .phone{
       display:block;
+
       margin-top:28px;
+
       color:#fff5e8;
+
       text-decoration:none;
+
       font-size:1.3rem;
+
       font-weight:850;
     }
 
@@ -193,12 +293,16 @@
 
     footer{
       padding:34px 20px 50px;
+
       text-align:center;
+
       color:#d2c3b0;
+
       font-size:0.92rem;
     }
 
     @keyframes fadeUp{
+
       from{
         opacity:0;
         transform:translateY(25px);
@@ -208,6 +312,7 @@
         opacity:1;
         transform:translateY(0);
       }
+
     }
 
     @media(max-width:700px){
@@ -223,6 +328,7 @@
       .glass-box,
       .section-box{
         padding:28px 22px;
+
         border-radius:22px;
       }
 
@@ -246,7 +352,11 @@
 
     <div class="hero-content">
 
-      <img src="banner.PNG" alt="Ronny Trubadur banner" class="banner" />
+      <img
+        src="banner.PNG"
+        alt="Ronny Trubadur banner"
+        class="banner"
+      />
 
       <div class="glass-box">
 
@@ -254,11 +364,10 @@
           Trubadur med rockesjel og altfor mange guilty pleasures.
         </div>
 
-        <div class="artists">
-          Creedence • Metallica • Johnny Cash • Elvis • Sie Gubba • Too Far Gone • Bon Jovi • Oasis • Bruce Springsteen • Eagles • CC Cowboys • Neil Young
-        </div>
-
-        <a href="#booking" class="btn">
+        <a
+          href="mailto:ronny.nilsen.studio@gmail.com"
+          class="btn"
+        >
           Kontakt / booking
         </a>
 
@@ -268,11 +377,19 @@
 
       </div>
 
+      <div class="glass-box artists-box">
+
+        <div class="artists">
+          Stage Dolls • Bruce Springsteen • Sie Gubba • Dolly Parton • Elvis • Johnny Cash • ABBA • Creedence Clearwater Revival • Metallica • Journey • Bon Jovi • Dumdum Boys • Tom Petty • Oasis • Åge Aleksandersen m.m.
+        </div>
+
+      </div>
+
     </div>
 
   </section>
 
-  <section class="section" id="booking">
+  <section class="section">
 
     <div class="container">
 
@@ -300,11 +417,16 @@
           Passer godt for puber, firmafester og arrangementer der musikken skal skape stemning.
         </p>
 
-        <a href="tel:+4741357603" class="phone">
-          41 35 76 03
-        </a>
+        <br>
 
-        <a href="mailto:ronny.nilsen.studio@gmail.com" class="btn booking-btn">
+        <p>
+          Tlf: 41 35 76 03
+        </p>
+
+        <a
+          href="mailto:ronny.nilsen.studio@gmail.com"
+          class="btn booking-btn"
+        >
           Kontakt / booking
         </a>
 

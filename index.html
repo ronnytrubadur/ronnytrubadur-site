@@ -28,6 +28,13 @@ padding:0;
 box-sizing:border-box;
 }
 
+html,
+body{
+width:100%;
+max-width:100%;
+overflow-x:hidden;
+}
+
 html{
 scroll-behavior:smooth;
 }
@@ -42,8 +49,6 @@ sans-serif;
 
 background:#050505;
 color:#f1eee9;
-
-overflow-x:hidden;
 }
 
 body::before{
@@ -84,17 +89,17 @@ z-index:-2;
 }
 
 .wrapper{
+width:100%;
 max-width:1450px;
+
 margin:auto;
 
 padding:
 18px
 18px
 80px;
-}
 
-.poster{
-position:relative;
+overflow:hidden;
 }
 
 .banner{
@@ -122,12 +127,17 @@ gap:30px;
 margin-top:-30px;
 
 position:relative;
+
 z-index:3;
+
+max-width:100%;
 }
 
 .left{
 padding:
 40px 10px 0 6px;
+
+min-width:0;
 }
 
 .tag{
@@ -183,10 +193,12 @@ margin-top:22px;
 
 .buttons{
 display:flex;
+
 gap:14px;
+
 flex-wrap:wrap;
 
-margin-top:40px;
+margin-top:42px;
 }
 
 .btn{
@@ -236,6 +248,8 @@ rgba(255,255,255,0.09);
 position:relative;
 
 height:780px;
+
+max-width:100%;
 }
 
 .photo{
@@ -258,17 +272,20 @@ transition:0.35s ease;
 
 .photo:hover{
 transform:scale(1.02);
+
 z-index:5;
 }
 
 .photo img{
 display:block;
 width:100%;
+
 border-radius:4px;
 }
 
 .p1{
 width:52%;
+
 top:10px;
 left:0;
 
@@ -277,6 +294,7 @@ transform:rotate(-5deg);
 
 .p2{
 width:56%;
+
 top:90px;
 right:0;
 
@@ -285,6 +303,7 @@ transform:rotate(4deg);
 
 .p3{
 width:48%;
+
 bottom:130px;
 left:40px;
 
@@ -293,6 +312,7 @@ transform:rotate(3deg);
 
 .p4{
 width:58%;
+
 bottom:0;
 right:20px;
 
@@ -300,14 +320,14 @@ transform:rotate(-4deg);
 }
 
 .artist-strip{
-margin-top:44px;
+margin-top:48px;
 
 padding-left:18px;
 
 border-left:
 2px solid rgba(255,255,255,0.18);
 
-max-width:760px;
+max-width:720px;
 
 font-size:1rem;
 
@@ -319,7 +339,7 @@ color:#cfc7bc;
 .flow{
 margin-top:110px;
 
-max-width:900px;
+max-width:760px;
 }
 
 .flow-block{
@@ -349,10 +369,12 @@ color:#c3bbaf;
 }
 
 .socials{
-margin-top:80px;
+margin-top:90px;
 
 display:flex;
+
 gap:22px;
+
 flex-wrap:wrap;
 
 font-size:0.96rem;
@@ -392,6 +414,7 @@ grid-template-columns:1fr;
 
 .collage{
 height:760px;
+
 margin-top:40px;
 }
 
@@ -411,7 +434,9 @@ border-radius:14px;
 }
 
 .layout{
-gap:10px;
+display:block;
+
+margin-top:0;
 }
 
 .left{
@@ -420,6 +445,7 @@ padding-top:30px;
 
 .lead{
 font-size:1.12rem;
+
 line-height:1.8;
 }
 
@@ -436,12 +462,49 @@ width:100%;
 }
 
 .collage{
-height:620px;
+position:relative;
+
+height:auto;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:10px;
+
+margin-top:36px;
+}
+
+.photo{
+position:relative;
+
+width:100%;
+
+top:auto;
+left:auto;
+right:auto;
+bottom:auto;
+
+transform:none;
+
+padding:
+7px
+7px
+22px;
+}
+
+.photo:hover{
+transform:none;
 }
 
 .artist-strip{
 font-size:0.95rem;
+
 line-height:2;
+}
+
+.flow{
+margin-top:70px;
 }
 
 .flow-block{
@@ -450,24 +513,6 @@ margin-bottom:70px;
 
 .flow-title{
 font-size:1.4rem;
-}
-
-.p1{
-width:50%;
-}
-
-.p2{
-width:54%;
-}
-
-.p3{
-width:46%;
-left:0;
-}
-
-.p4{
-width:58%;
-right:0;
 }
 
 }
@@ -480,8 +525,6 @@ right:0;
 <div class="grain"></div>
 
 <div class="wrapper">
-
-<div class="poster">
 
 <img
 src="banner.PNG"
@@ -508,10 +551,6 @@ Det spilles live hele veien, og kvelden utvikler seg ofte litt etter hvert som f
 <div class="text">
 Musikken tilpasses alltid rommet og stemningen gjennom kvelden.
 Guilty pleasures kan forekomme uten forvarsel.
-</div>
-
-<div class="text">
-Jeg spiller fra et stort repertoar, og kvelden tar ofte litt retning etter stemningen og ønskene fra publikum.
 </div>
 
 <div class="buttons">
@@ -568,13 +607,7 @@ Utover kvelden
 
 <div class="flow-text">
 Noen låter er planlagt.
-Andre dukker opp når publikum begynner å ønske seg ting.
-</div>
-
-<br>
-
-<div class="flow-text">
-Det blir sjelden helt lik kveld to ganger.
+Andre kommer gjerne fra publikum underveis.
 </div>
 
 </div>

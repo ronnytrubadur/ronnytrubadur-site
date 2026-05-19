@@ -35,6 +35,10 @@ max-width:100%;
 overflow-x:hidden;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:
 system-ui,
@@ -43,7 +47,7 @@ BlinkMacSystemFont,
 "Segoe UI",
 sans-serif;
 
-background:#060606;
+background:#050505;
 color:#f1eee9;
 }
 
@@ -54,7 +58,7 @@ inset:0;
 
 background:
 linear-gradient(
-rgba(0,0,0,0.72),
+rgba(0,0,0,0.70),
 rgba(0,0,0,0.84)
 ),
 url("bilde1.PNG")
@@ -63,18 +67,18 @@ center center / cover no-repeat;
 z-index:-3;
 
 filter:
-brightness(0.55)
-contrast(1.04)
+brightness(0.58)
+contrast(1.03)
 saturate(0.7);
 }
 
-.noise{
+.grain{
 position:fixed;
 inset:0;
 
 pointer-events:none;
 
-opacity:0.08;
+opacity:0.07;
 
 background-image:
 radial-gradient(#ffffff18 1px, transparent 1px);
@@ -85,51 +89,56 @@ z-index:-2;
 }
 
 .wrapper{
-max-width:1500px;
+width:100%;
+max-width:1450px;
+
 margin:auto;
 
 padding:
-14px
-14px
-90px;
+16px
+16px
+80px;
 }
 
 .banner{
 width:100%;
+
 display:block;
 
-border-radius:14px;
+border-radius:16px;
 
 border:
 1px solid rgba(255,255,255,0.08);
 
 box-shadow:
-0 30px 90px rgba(0,0,0,0.6);
+0 30px 90px rgba(0,0,0,0.55);
 }
 
-.content{
+.layout{
 display:grid;
 
 grid-template-columns:
-1fr 620px;
+1fr 540px;
 
-gap:40px;
+gap:34px;
 
-margin-top:40px;
+margin-top:28px;
+
+align-items:start;
 }
 
 .left{
-padding-top:30px;
+padding-top:18px;
 }
 
 .tag{
 display:inline-block;
 
-padding:
-8px
-14px;
+margin-bottom:26px;
 
-margin-bottom:28px;
+padding:
+9px
+15px;
 
 border-radius:999px;
 
@@ -153,17 +162,17 @@ color:#d7d0c6;
 .lead{
 max-width:620px;
 
-font-size:1.28rem;
+font-size:1.22rem;
 
 line-height:1.9;
 
-color:#ece5db;
+color:#ece6dd;
 }
 
 .text{
-max-width:680px;
+max-width:660px;
 
-margin-top:28px;
+margin-top:26px;
 
 font-size:1.02rem;
 
@@ -224,7 +233,7 @@ rgba(255,255,255,0.09);
 }
 
 .artist-strip{
-margin-top:48px;
+margin-top:46px;
 
 padding-left:18px;
 
@@ -240,76 +249,62 @@ line-height:2.1;
 color:#cfc7bc;
 }
 
-.poster-wall{
-position:relative;
+.collage{
+display:grid;
 
-min-height:920px;
+grid-template-columns:
+1fr 1fr;
+
+gap:14px;
 }
 
-.poster{
-position:absolute;
-
+.photo{
 background:#111;
 
 padding:
-10px
-10px
-32px;
+8px
+8px
+22px;
+
+border-radius:4px;
 
 box-shadow:
-0 20px 60px rgba(0,0,0,0.45);
+0 18px 50px rgba(0,0,0,0.42);
 
-transition:0.35s ease;
+transition:0.3s ease;
 }
 
-.poster:hover{
+.photo:nth-child(1){
+transform:rotate(-2deg);
+}
+
+.photo:nth-child(2){
+transform:rotate(2deg);
+margin-top:24px;
+}
+
+.photo:nth-child(3){
+transform:rotate(1deg);
+margin-top:-12px;
+}
+
+.photo:nth-child(4){
+transform:rotate(-2deg);
+margin-top:18px;
+}
+
+.photo:hover{
 transform:scale(1.02);
-z-index:5;
 }
 
-.poster img{
+.photo img{
 display:block;
 width:100%;
-}
-
-.poster1{
-width:54%;
-
-top:0;
-left:0;
-
-transform:rotate(-4deg);
-}
-
-.poster2{
-width:48%;
-
-top:110px;
-right:0;
-
-transform:rotate(5deg);
-}
-
-.poster3{
-width:44%;
-
-bottom:160px;
-left:40px;
-
-transform:rotate(2deg);
-}
-
-.poster4{
-width:58%;
-
-bottom:0;
-right:20px;
-
-transform:rotate(-3deg);
+border-radius:2px;
 }
 
 .flow{
-margin-top:120px;
+margin-top:100px;
 
 max-width:760px;
 }
@@ -321,23 +316,23 @@ margin-bottom:90px;
 .block-title{
 font-family:'Oswald',sans-serif;
 
-font-size:1.55rem;
+font-size:1.5rem;
 
 letter-spacing:0.02em;
 
-margin-bottom:24px;
+margin-bottom:22px;
 
 color:#f1ece3;
 }
 
 .block-text{
+max-width:720px;
+
 font-size:1.04rem;
 
 line-height:2.05;
 
 color:#c4bcaf;
-
-max-width:720px;
 }
 
 .socials{
@@ -376,15 +371,14 @@ font-size:0.9rem;
 color:#7f786e;
 }
 
-@media(max-width:1150px){
+@media(max-width:1100px){
 
-.content{
+.layout{
 grid-template-columns:1fr;
 }
 
-.poster-wall{
-height:850px;
-margin-top:30px;
+.collage{
+max-width:720px;
 }
 
 }
@@ -402,12 +396,12 @@ padding:
 border-radius:10px;
 }
 
-.content{
+.layout{
 display:block;
 }
 
 .left{
-padding-top:26px;
+padding-top:24px;
 }
 
 .lead{
@@ -427,34 +421,23 @@ flex-direction:column;
 width:100%;
 }
 
-.poster-wall{
-display:grid;
-
-grid-template-columns:1fr 1fr;
+.collage{
+margin-top:42px;
 
 gap:10px;
-
-min-height:auto;
-
-margin-top:40px;
 }
 
-.poster{
-position:relative;
-
-width:100% !important;
-
-top:auto !important;
-left:auto !important;
-right:auto !important;
-bottom:auto !important;
-
-transform:none !important;
-
+.photo{
 padding:
-7px
-7px
-20px;
+6px
+6px
+18px;
+}
+
+.photo:nth-child(2),
+.photo:nth-child(3),
+.photo:nth-child(4){
+margin-top:0;
 }
 
 .flow{
@@ -476,7 +459,7 @@ font-size:1.35rem;
 
 <body>
 
-<div class="noise"></div>
+<div class="grain"></div>
 
 <div class="wrapper">
 
@@ -486,7 +469,7 @@ alt="Ronny Trubadur"
 class="banner"
 />
 
-<div class="content">
+<div class="layout">
 
 <div class="left">
 
@@ -529,21 +512,21 @@ Rock, country, norske klassikere og guilty pleasures fra flere tiår.
 
 </div>
 
-<div class="poster-wall">
+<div class="collage">
 
-<div class="poster poster1">
+<div class="photo">
 <img src="ronny1.PNG" alt="">
 </div>
 
-<div class="poster poster2">
+<div class="photo">
 <img src="ronny2.PNG" alt="">
 </div>
 
-<div class="poster poster3">
+<div class="photo">
 <img src="ronny3.PNG" alt="">
 </div>
 
-<div class="poster poster4">
+<div class="photo">
 <img src="ronny4.PNG" alt="">
 </div>
 

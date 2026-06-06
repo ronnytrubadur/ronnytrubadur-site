@@ -2,601 +2,410 @@
 <html lang="no">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Ronny Trubadur</title>
+<title>Ronny Trubadur | Live musikk</title>
 
-<meta name="description" content="Live musikk, pubrock, allsang og kjente låter fra flere tiår." />
-
+<meta name="description" content="Ronny Trubadur – kjente låter, allsang og live musikk med base i Trondheim / Aure." />
 <meta property="og:title" content="Ronny Trubadur" />
-<meta property="og:description" content="Live musikk • pubrock • allsang" />
+<meta property="og:description" content="Kjente låter, allsang og live musikk." />
 <meta property="og:image" content="banner.PNG" />
 <meta property="og:type" content="website" />
 
 <link rel="icon" href="logo.png" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html,
-body{
-width:100%;
-max-width:100%;
-overflow-x:hidden;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:
-system-ui,
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-sans-serif;
-
-background:#050505;
-color:#f1eee9;
+  background:#070808;
+  color:#f4f1ec;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  overflow-x:hidden;
 }
 
 body::before{
-content:"";
-position:fixed;
-inset:0;
-
-background:
-linear-gradient(
-rgba(0,0,0,0.70),
-rgba(0,0,0,0.84)
-),
-url("bilde1.PNG")
-center center / cover no-repeat;
-
-z-index:-3;
-
-filter:
-brightness(0.58)
-contrast(1.03)
-saturate(0.7);
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(to bottom, rgba(7,8,8,0.38), rgba(7,8,8,0.90)),
+    url("bilde1.PNG") center center / cover no-repeat;
+  z-index:-2;
+  filter:saturate(0.65) contrast(1.02) brightness(0.75);
 }
 
-.grain{
-position:fixed;
-inset:0;
-
-pointer-events:none;
-
-opacity:0.07;
-
-background-image:
-radial-gradient(#ffffff18 1px, transparent 1px);
-
-background-size:4px 4px;
-
-z-index:-2;
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.08), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(120,120,120,0.08), transparent 35%);
+  pointer-events:none;
+  z-index:-1;
 }
 
 .wrapper{
-width:100%;
-max-width:1450px;
+  width:100%;
+  max-width:1240px;
+  margin:0 auto;
+  padding:22px 18px 80px;
+}
 
-margin:auto;
-
-padding:
-16px
-16px
-80px;
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
 .banner{
-width:100%;
-
-display:block;
-
-border-radius:16px;
-
-border:
-1px solid rgba(255,255,255,0.08);
-
-box-shadow:
-0 30px 90px rgba(0,0,0,0.55);
+  width:100%;
+  max-width:1040px;
+  display:block;
+  margin:0 auto 52px;
+  border-radius:26px;
+  box-shadow:0 35px 100px rgba(0,0,0,0.45);
+  border:1px solid rgba(255,255,255,0.08);
 }
 
-.layout{
-display:grid;
-
-grid-template-columns:
-1fr 540px;
-
-gap:34px;
-
-margin-top:28px;
-
-align-items:start;
+.intro{
+  max-width:760px;
 }
 
-.left{
-padding-top:18px;
-}
-
-.tag{
-display:inline-block;
-
-margin-bottom:26px;
-
-padding:
-9px
-15px;
-
-border-radius:999px;
-
-background:
-rgba(255,255,255,0.05);
-
-border:
-1px solid rgba(255,255,255,0.08);
-
-font-size:0.78rem;
-
-letter-spacing:0.14em;
-
-text-transform:uppercase;
-
-font-family:'Oswald',sans-serif;
-
-color:#d7d0c6;
+.kicker{
+  font-size:0.78rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:#b8b4ad;
+  margin-bottom:22px;
 }
 
 .lead{
-max-width:620px;
-
-font-size:1.22rem;
-
-line-height:1.9;
-
-color:#ece6dd;
+  font-size:clamp(2rem,5vw,4.8rem);
+  line-height:1.02;
+  letter-spacing:-0.06em;
+  font-weight:800;
+  color:#fffaf2;
 }
 
-.text{
-max-width:660px;
-
-margin-top:26px;
-
-font-size:1.02rem;
-
-line-height:2;
-
-color:#beb6aa;
+.sub{
+  margin-top:30px;
+  max-width:650px;
+  font-size:1.08rem;
+  line-height:1.9;
+  color:#c8c0b4;
 }
 
-.buttons{
-display:flex;
-flex-wrap:wrap;
-gap:14px;
-
-margin-top:42px;
+.actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:38px;
 }
 
 .btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-
-min-height:56px;
-
-padding:0 26px;
-
-border-radius:999px;
-
-text-decoration:none;
-
-font-weight:700;
-
-transition:0.25s ease;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:56px;
+  padding:0 28px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  transition:0.25s ease;
 }
 
 .btn-main{
-background:#ece8e1;
-color:#111;
+  background:#f1eee7;
+  color:#111;
 }
 
 .btn-main:hover{
-transform:translateY(-2px);
-background:#fff;
+  transform:translateY(-2px);
+  background:#fff;
 }
 
-.btn-ghost{
-background:
-rgba(255,255,255,0.05);
-
-border:
-1px solid rgba(255,255,255,0.08);
-
-color:#fff;
+.btn-soft{
+  color:#f3efe7;
+  border:1px solid rgba(255,255,255,0.16);
+  background:rgba(255,255,255,0.04);
 }
 
-.btn-ghost:hover{
-background:
-rgba(255,255,255,0.09);
+.btn-soft:hover{
+  background:rgba(255,255,255,0.09);
 }
 
-.artist-strip{
-margin-top:46px;
-
-padding-left:18px;
-
-border-left:
-2px solid rgba(255,255,255,0.18);
-
-max-width:720px;
-
-font-size:1rem;
-
-line-height:2.1;
-
-color:#cfc7bc;
+.section{
+  padding:90px 0 0;
 }
 
-.collage{
-display:grid;
-
-grid-template-columns:
-1fr 1fr;
-
-gap:14px;
+.row{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:70px;
+  align-items:start;
 }
 
-.photo{
-background:#111;
-
-padding:
-8px
-8px
-22px;
-
-border-radius:4px;
-
-box-shadow:
-0 18px 50px rgba(0,0,0,0.42);
-
-transition:0.3s ease;
+.small-title{
+  font-size:0.85rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:#aaa49b;
 }
 
-.photo:nth-child(1){
-transform:rotate(-2deg);
+.text-block{
+  font-size:1.08rem;
+  line-height:2;
+  color:#d2c9bd;
+  max-width:720px;
 }
 
-.photo:nth-child(2){
-transform:rotate(2deg);
-margin-top:24px;
+.text-block p + p{
+  margin-top:22px;
 }
 
-.photo:nth-child(3){
-transform:rotate(1deg);
-margin-top:-12px;
+.visual-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
 }
 
-.photo:nth-child(4){
-transform:rotate(-2deg);
-margin-top:18px;
+.visual-grid img{
+  width:100%;
+  display:block;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 25px 70px rgba(0,0,0,0.34);
 }
 
-.photo:hover{
-transform:scale(1.02);
+.visual-grid img:nth-child(2){
+  margin-top:46px;
 }
 
-.photo img{
-display:block;
-width:100%;
-border-radius:2px;
+.visual-grid img:nth-child(3){
+  margin-top:-28px;
 }
 
-.flow{
-margin-top:100px;
-
-max-width:760px;
+.info{
+  margin-top:90px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
 }
 
-.block{
-margin-bottom:90px;
+.info-card{
+  padding:34px;
+  border-radius:30px;
+  background:rgba(255,255,255,0.045);
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
 }
 
-.block-title{
-font-family:'Oswald',sans-serif;
-
-font-size:1.5rem;
-
-letter-spacing:0.02em;
-
-margin-bottom:22px;
-
-color:#f1ece3;
+.info-card h2{
+  font-size:1.1rem;
+  margin-bottom:18px;
+  color:#fff7ed;
 }
 
-.block-text{
-max-width:720px;
-
-font-size:1.04rem;
-
-line-height:2.05;
-
-color:#c4bcaf;
+.info-card p{
+  color:#c8c0b4;
+  line-height:1.9;
 }
 
 .socials{
-margin-top:90px;
-
-display:flex;
-gap:22px;
-flex-wrap:wrap;
-
-font-size:0.96rem;
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+  margin-top:90px;
 }
 
 .socials a{
-color:#9d968c;
-
-text-decoration:none;
-
-border-bottom:
-1px solid transparent;
-
-transition:0.25s ease;
+  color:#a9a29a;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:0.25s ease;
 }
 
 .socials a:hover{
-color:#fff;
-
-border-color:
-rgba(255,255,255,0.35);
+  color:#fff;
+  border-color:rgba(255,255,255,0.35);
 }
 
 .bottom{
-margin-top:120px;
-
-font-size:0.9rem;
-
-color:#7f786e;
+  margin-top:90px;
+  color:#827b72;
+  font-size:0.9rem;
 }
 
-@media(max-width:1100px){
+@media(max-width:900px){
+  .hero{
+    justify-content:flex-start;
+    padding-top:16px;
+  }
 
-.layout{
-grid-template-columns:1fr;
+  .banner{
+    margin-bottom:42px;
+    border-radius:18px;
+  }
+
+  .row,
+  .info{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+
+  .section{
+    padding-top:70px;
+  }
+
+  .visual-grid{
+    gap:10px;
+  }
+
+  .actions{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
 }
 
-.collage{
-max-width:720px;
+@media(max-width:600px){
+  .wrapper{
+    padding:12px 12px 60px;
+  }
+
+  .lead{
+    font-size:2.45rem;
+  }
+
+  .sub,
+  .text-block{
+    font-size:1rem;
+  }
+
+  .visual-grid img{
+    border-radius:16px;
+  }
+
+  .info-card{
+    padding:26px 22px;
+  }
 }
-
-}
-
-@media(max-width:700px){
-
-.wrapper{
-padding:
-10px
-10px
-70px;
-}
-
-.banner{
-border-radius:10px;
-}
-
-.layout{
-display:block;
-}
-
-.left{
-padding-top:24px;
-}
-
-.lead{
-font-size:1.1rem;
-line-height:1.8;
-}
-
-.text{
-line-height:1.9;
-}
-
-.buttons{
-flex-direction:column;
-}
-
-.btn{
-width:100%;
-}
-
-.collage{
-margin-top:42px;
-
-gap:10px;
-}
-
-.photo{
-padding:
-6px
-6px
-18px;
-}
-
-.photo:nth-child(2),
-.photo:nth-child(3),
-.photo:nth-child(4){
-margin-top:0;
-}
-
-.flow{
-margin-top:70px;
-}
-
-.block{
-margin-bottom:70px;
-}
-
-.block-title{
-font-size:1.35rem;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
-<div class="grain"></div>
-
 <div class="wrapper">
 
-<img
-src="banner.PNG"
-alt="Ronny Trubadur"
-class="banner"
-/>
+  <section class="hero">
 
-<div class="layout">
+    <img src="banner.PNG" alt="Ronny Trubadur" class="banner" />
 
-<div class="left">
+    <div class="intro">
 
-<div class="tag">
-LIVE MUSIKK • PUBROCK
-</div>
+      <div class="kicker">
+        Live musikk • pubrock
+      </div>
 
-<div class="lead">
-Kjente låter, allsang og et repertoar som har blitt til gjennom mange år på scena.
-</div>
+      <div class="lead">
+        Kjente låter, allsang og et repertoar som har blitt til gjennom mange år på scena.
+      </div>
 
-<div class="text">
-Det spilles live hele veien, og kvelden utvikler seg ofte litt etter hvert som folk kommer med ønsker.
-</div>
+      <div class="sub">
+        Musikken tilpasses alltid rommet og stemningen gjennom kvelden. Guilty pleasures kan forekomme uten forvarsel.
+      </div>
 
-<div class="text">
-Musikken tilpasses alltid rommet og stemningen gjennom kvelden.
-Guilty pleasures kan forekomme uten forvarsel.
-</div>
+      <div class="actions">
+        <a href="mailto:ronny.nilsen.studio@gmail.com" class="btn btn-main">
+          Kontakt for booking
+        </a>
 
-<div class="buttons">
+        <a href="tel:41357603" class="btn btn-soft">
+          41 35 76 03
+        </a>
+      </div>
 
-<a
-href="mailto:ronny.nilsen.studio@gmail.com"
-class="btn btn-main">
-Kontakt for booking
-</a>
+    </div>
 
-<a
-href="tel:41357603"
-class="btn btn-ghost">
-41 35 76 03
-</a>
+  </section>
 
-</div>
+  <section class="section">
 
-<div class="artist-strip">
-Rock, country, norske klassikere og guilty pleasures fra flere tiår.
-</div>
+    <div class="row">
 
-</div>
+      <div class="small-title">
+        Repertoar
+      </div>
 
-<div class="collage">
+      <div class="text-block">
+        <p>
+          Det spilles live hele veien, og kvelden utvikler seg ofte litt etter hvert som folk kommer med ønsker.
+        </p>
 
-<div class="photo">
-<img src="ronny1.PNG" alt="">
-</div>
+        <p>
+          Rock, country, norske klassikere og guilty pleasures fra flere tiår.
+        </p>
+      </div>
 
-<div class="photo">
-<img src="ronny2.PNG" alt="">
-</div>
+    </div>
 
-<div class="photo">
-<img src="ronny3.PNG" alt="">
-</div>
+  </section>
 
-<div class="photo">
-<img src="ronny4.PNG" alt="">
-</div>
+  <section class="section">
 
-</div>
+    <div class="visual-grid">
+      <img src="ronny1.PNG" alt="Ronny Trubadur">
+      <img src="ronny2.PNG" alt="Ronny Trubadur">
+      <img src="ronny3.PNG" alt="Ronny Trubadur">
+      <img src="ronny4.PNG" alt="Ronny Trubadur">
+    </div>
 
-</div>
+  </section>
 
-<div class="flow">
+  <section class="section">
 
-<div class="block">
+    <div class="info">
 
-<div class="block-title">
-Utover kvelden
-</div>
+      <div class="info-card">
+        <h2>Bak gitaren</h2>
+        <p>
+          Trubadur med base i Trondheim / Aure. Lang erfaring fra scene, duo og band.
+        </p>
+      </div>
 
-<div class="block-text">
-Noen låter er planlagt.
-Andre kommer gjerne fra publikum underveis.
-</div>
+      <div class="info-card">
+        <h2>Spilletid & pris</h2>
+        <p>
+          Vanlig oppsett er 3 x 45 minutter med lyd og lys inkludert. Pris avtales etter arrangement og reisevei. Oppdrag fra 5000 kr.
+        </p>
+      </div>
 
-</div>
+    </div>
 
-<div class="block">
+  </section>
 
-<div class="block-title">
-Bak gitaren
-</div>
+  <div class="socials">
+    <a href="https://www.instagram.com/ronny_nilsen_84" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@ronnytrubadur" target="_blank">TikTok</a>
+    <a href="https://www.facebook.com/share/18RnqpPKvT/?mibextid=wwXIfr" target="_blank">Facebook</a>
+  </div>
 
-<div class="block-text">
-Trubadur med base i Trondheim / Aure.
-Lang erfaring fra scene, duo og band.
-</div>
-
-<br>
-
-<div class="block-text">
-Vanlig oppsett er 3 x 45 minutter med lyd og lys inkludert.
-Pris avtales etter arrangement og reisevei.
-Oppdrag fra 5000 kr.
-</div>
-
-</div>
-
-<div class="socials">
-
-<a
-href="https://www.instagram.com/ronny_nilsen_84"
-target="_blank">
-Instagram
-</a>
-
-<a
-href="https://www.tiktok.com/@ronnytrubadur"
-target="_blank">
-TikTok
-</a>
-
-<a
-href="https://www.facebook.com/share/18RnqpPKvT/?mibextid=wwXIfr"
-target="_blank">
-Facebook
-</a>
-
-</div>
-
-<div class="bottom">
-Trondheim / Aure
-</div>
-
-</div>
+  <div class="bottom">
+    Trondheim / Aure
+  </div>
 
 </div>
 

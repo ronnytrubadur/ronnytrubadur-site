@@ -21,8 +21,7 @@
   box-sizing:border-box;
 }
 
-html,
-body{
+html,body{
   width:100%;
   max-width:100%;
   overflow-x:hidden;
@@ -59,7 +58,6 @@ body::after{
 }
 
 .hero{
-  min-height:auto;
   padding:12px 0 36px;
 }
 
@@ -157,17 +155,20 @@ body::after{
 
 .visual-grid img{
   width:100%;
+  height:100%;
   display:block;
+  object-fit:cover;
   border-radius:18px;
   box-shadow:0 24px 70px rgba(0,0,0,0.38);
 }
 
-.visual-grid img:nth-child(2){
-  margin-top:34px;
+.visual-grid img:first-child{
+  grid-column:1 / -1;
+  max-height:720px;
 }
 
 .visual-grid img:nth-child(3){
-  margin-top:-22px;
+  margin-top:34px;
 }
 
 .section{
@@ -273,7 +274,10 @@ body::after{
     border-radius:14px;
   }
 
-  .visual-grid img:nth-child(2),
+  .visual-grid img:first-child{
+    max-height:none;
+  }
+
   .visual-grid img:nth-child(3){
     margin-top:0;
   }
@@ -329,10 +333,10 @@ body::after{
   <section class="poster-section">
 
     <div class="visual-grid">
-      <img src="ronny1.PNG" alt="Ronny Trubadur">
-      <img src="ronny2.PNG" alt="Ronny Trubadur">
-      <img src="ronny3.PNG" alt="Ronny Trubadur">
-      <img src="ronny4.PNG" alt="Ronny Trubadur">
+      <img src="IMG_3839.jpeg" alt="Ronny Trubadur">
+      <img src="att.zQTSPAT7qBCO__JuRrMnIfOE7LYr3MtQ8_pOlJV5b5Q.jpeg" alt="Ronny Trubadur">
+      <img src="att.rUWockvKqmsr0Q1iQq85SncEdEEC-eINbu9N9EfR5UU.jpeg" alt="Ronny Trubadur">
+      <img src="att.WTQKaG_oWiJ95yJktcRUQraIYzioixIeJrN_LkXLHaY.jpeg" alt="Ronny Trubadur">
     </div>
 
   </section>

@@ -38,7 +38,7 @@ body::before{
   position:fixed;
   inset:0;
   background:
-    linear-gradient(to bottom, rgba(7,8,8,0.46), rgba(7,8,8,0.92)),
+    linear-gradient(to bottom, rgba(7,8,8,0.48), rgba(7,8,8,0.92)),
     url("bilde1.PNG") center center / cover no-repeat;
   z-index:-2;
   filter:saturate(0.58) contrast(1.02) brightness(0.62);
@@ -59,28 +59,26 @@ body::after{
   width:100%;
   max-width:1180px;
   margin:0 auto;
-  padding:18px 16px 80px;
+  padding:18px 16px 70px;
 }
 
 .hero{
-  min-height:92vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+  min-height:auto;
+  padding:12px 0 36px;
 }
 
 .banner{
   width:100%;
   max-width:1040px;
   display:block;
-  margin:0 auto 54px;
+  margin:0 auto 42px;
   border-radius:24px;
   box-shadow:0 35px 100px rgba(0,0,0,0.48);
   border:1px solid rgba(255,255,255,0.08);
 }
 
 .intro{
-  max-width:760px;
+  max-width:720px;
 }
 
 .kicker{
@@ -88,22 +86,22 @@ body::after{
   letter-spacing:0.18em;
   text-transform:uppercase;
   color:#b8b4ad;
-  margin-bottom:22px;
+  margin-bottom:20px;
 }
 
 .lead{
-  font-size:clamp(2rem,5vw,4.5rem);
-  line-height:1.04;
-  letter-spacing:-0.06em;
+  font-size:clamp(1.75rem,4.4vw,3.8rem);
+  line-height:1.06;
+  letter-spacing:-0.055em;
   font-weight:800;
   color:#fffaf2;
 }
 
 .sub{
-  margin-top:30px;
-  max-width:660px;
-  font-size:1.08rem;
-  line-height:1.9;
+  margin-top:26px;
+  max-width:640px;
+  font-size:1.04rem;
+  line-height:1.85;
   color:#c8c0b4;
 }
 
@@ -111,14 +109,14 @@ body::after{
   display:flex;
   gap:14px;
   flex-wrap:wrap;
-  margin-top:38px;
+  margin-top:34px;
 }
 
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  min-height:56px;
+  min-height:54px;
   padding:0 28px;
   border-radius:999px;
   text-decoration:none;
@@ -146,36 +144,11 @@ body::after{
   background:rgba(255,255,255,0.09);
 }
 
-.section{
-  padding:84px 0 0;
-}
-
-.row{
-  display:grid;
-  grid-template-columns:0.8fr 1.2fr;
-  gap:70px;
-  align-items:start;
-}
-
-.small-title{
-  font-size:0.82rem;
-  letter-spacing:0.16em;
-  text-transform:uppercase;
-  color:#aaa49b;
-}
-
-.text-block{
-  font-size:1.08rem;
-  line-height:2;
-  color:#d2c9bd;
-  max-width:720px;
-}
-
 .poster-section{
-  margin-top:90px;
-  padding:34px;
-  border-radius:34px;
-  background:rgba(5,6,6,0.78);
+  margin-top:34px;
+  padding:18px;
+  border-radius:28px;
+  background:rgba(5,6,6,0.76);
   border:1px solid rgba(255,255,255,0.07);
   box-shadow:0 35px 100px rgba(0,0,0,0.38);
   backdrop-filter:blur(8px);
@@ -184,7 +157,7 @@ body::after{
 .visual-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:22px;
+  gap:18px;
 }
 
 .visual-grid img{
@@ -195,44 +168,48 @@ body::after{
 }
 
 .visual-grid img:nth-child(2){
-  margin-top:42px;
+  margin-top:34px;
 }
 
 .visual-grid img:nth-child(3){
-  margin-top:-26px;
+  margin-top:-22px;
+}
+
+.section{
+  padding:74px 0 0;
 }
 
 .info{
-  margin-top:90px;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:26px;
+  gap:22px;
 }
 
 .info-card{
-  padding:34px;
-  border-radius:30px;
+  padding:24px;
+  border-radius:22px;
   background:rgba(255,255,255,0.045);
   border:1px solid rgba(255,255,255,0.08);
   backdrop-filter:blur(12px);
 }
 
 .info-card h2{
-  font-size:1.1rem;
-  margin-bottom:18px;
+  font-size:1.05rem;
+  margin-bottom:14px;
   color:#fff7ed;
 }
 
 .info-card p{
   color:#c8c0b4;
-  line-height:1.9;
+  line-height:1.85;
+  font-size:0.98rem;
 }
 
 .socials{
   display:flex;
   gap:22px;
   flex-wrap:wrap;
-  margin-top:90px;
+  margin-top:60px;
 }
 
 .socials a{
@@ -247,32 +224,19 @@ body::after{
   border-color:rgba(255,255,255,0.35);
 }
 
-.bottom{
-  margin-top:90px;
-  color:#827b72;
-  font-size:0.9rem;
-}
-
 @media(max-width:900px){
-  .hero{
-    justify-content:flex-start;
-    padding-top:12px;
-    min-height:auto;
-  }
-
   .banner{
-    margin-bottom:42px;
+    margin-bottom:38px;
     border-radius:18px;
   }
 
-  .row,
   .info{
     grid-template-columns:1fr;
-    gap:34px;
+    gap:18px;
   }
 
   .section{
-    padding-top:70px;
+    padding-top:62px;
   }
 
   .actions{
@@ -286,25 +250,28 @@ body::after{
 
 @media(max-width:600px){
   .wrapper{
-    padding:12px 12px 60px;
+    padding:12px 12px 54px;
+  }
+
+  .hero{
+    padding-top:10px;
   }
 
   .lead{
-    font-size:2.35rem;
+    font-size:2.05rem;
   }
 
-  .sub,
-  .text-block{
+  .sub{
     font-size:1rem;
   }
 
   .poster-section{
-    padding:14px;
-    border-radius:22px;
+    padding:12px;
+    border-radius:20px;
   }
 
   .visual-grid{
-    gap:14px;
+    gap:12px;
   }
 
   .visual-grid img{
@@ -317,7 +284,12 @@ body::after{
   }
 
   .info-card{
-    padding:26px 22px;
+    padding:22px 20px;
+    border-radius:18px;
+  }
+
+  .socials{
+    margin-top:48px;
   }
 }
 </style>
@@ -338,7 +310,7 @@ body::after{
       </div>
 
       <div class="lead">
-        Kjente låter, allsang og et repertoar som har blitt til gjennom mange år på scena.
+        Kjente låter, allsang og live musikk.
       </div>
 
       <div class="sub">
@@ -353,24 +325,6 @@ body::after{
         <a href="tel:41357603" class="btn btn-soft">
           41 35 76 03
         </a>
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="section">
-
-    <div class="row">
-
-      <div class="small-title">
-        Repertoar
-      </div>
-
-      <div class="text-block">
-        <p>
-          Det spilles live hele veien, og kvelden utvikler seg ofte litt etter hvert som folk kommer med ønsker.
-        </p>
       </div>
 
     </div>
@@ -414,10 +368,6 @@ body::after{
     <a href="https://www.instagram.com/ronny_nilsen_84" target="_blank">Instagram</a>
     <a href="https://www.tiktok.com/@ronnytrubadur" target="_blank">TikTok</a>
     <a href="https://www.facebook.com/share/18RnqpPKvT/?mibextid=wwXIfr" target="_blank">Facebook</a>
-  </div>
-
-  <div class="bottom">
-    Trondheim / Aure
   </div>
 
 </div>

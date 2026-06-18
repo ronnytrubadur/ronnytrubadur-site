@@ -4,15 +4,40 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Ronny Trubadur | Live musikk</title>
+<!-- ====== SEO: dette er det Google viser i søkeresultatet ====== -->
+<title>Ronny Trubadur | Trubadur & live musikk i Trondheim og på Nordmøre</title>
+<meta name="description" content="Book Ronny Trubadur til pub, restaurant, firmafest, camping, festival eller privat arrangement. Solo med gitar og vokal – rock, country og norske klassikere. Base i Trondheim og Aure." />
+<link rel="canonical" href="https://www.ronnytrubadur.no/" />
 
-<meta name="description" content="Ronny Trubadur – ekte gitar, ekte vokal og ekte stemning med base i Trondheim / Aure." />
-<meta property="og:title" content="Ronny Trubadur" />
-<meta property="og:description" content="Ekte gitar. Ekte vokal. Ekte stemning." />
-<meta property="og:image" content="banner.PNG" />
+<meta property="og:title" content="Ronny Trubadur – live musikk" />
+<meta property="og:description" content="Ekte gitar. Ekte vokal. Ekte stemning. Book trubadur i Trondheim og på Nordmøre." />
+<meta property="og:image" content="https://www.ronnytrubadur.no/banner.PNG" />
+<meta property="og:url" content="https://www.ronnytrubadur.no/" />
 <meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
 
 <link rel="icon" href="logo.png" />
+
+<!-- ====== Structured data: hjelper Google forstå at du er en bookbar artist ====== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Ronny Trubadur",
+  "url": "https://www.ronnytrubadur.no/",
+  "image": "https://www.ronnytrubadur.no/banner.PNG",
+  "genre": ["Pubrock", "Rock", "Country", "Norske klassikere"],
+  "description": "Solo trubadur med gitar og vokal. Spiller pub, restaurant, firmafest, camping, festival og private arrangement i Trondheim og på Nordmøre.",
+  "areaServed": ["Trondheim", "Aure", "Kristiansund", "Molde", "Orkanger", "Røros", "Trøndelag", "Nordmøre"],
+  "telephone": "+4741357603",
+  "email": "ronny.nilsen.studio@gmail.com",
+  "sameAs": [
+    "https://www.instagram.com/ronny_nilsen_84",
+    "https://www.tiktok.com/@ronnytrubadur",
+    "https://www.facebook.com/share/18RnqpPKvT/?mibextid=wwXIfr"
+  ]
+}
+</script>
 
 <style>
 *{
@@ -93,6 +118,14 @@ body::after{
   font-size:1.05rem;
   line-height:1.85;
   color:#d4cabe;
+}
+
+.eventtypes{
+  margin-top:18px;
+  max-width:640px;
+  font-size:0.95rem;
+  line-height:1.7;
+  color:#aaa197;
 }
 
 .actions{
@@ -182,6 +215,60 @@ body::after{
   padding:92px 0 0;
 }
 
+.section-label{
+  font-size:0.78rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:#c6beb3;
+  margin-bottom:22px;
+}
+
+/* ====== Video ====== */
+.video-frame{
+  position:relative;
+  width:100%;
+  padding-top:56.25%;
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.10);
+  box-shadow:0 35px 100px rgba(0,0,0,0.35);
+  background:rgba(255,255,255,0.04);
+}
+
+.video-frame iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* ====== Repertoar ====== */
+.repertoire{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:6px;
+}
+
+.repertoire span{
+  display:inline-flex;
+  align-items:center;
+  padding:9px 16px;
+  border-radius:999px;
+  font-size:0.92rem;
+  color:#e9e0d4;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+}
+
+.repertoire-note{
+  margin-top:18px;
+  color:#aaa197;
+  font-size:0.95rem;
+  line-height:1.7;
+}
+
 .info{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -213,23 +300,60 @@ body::after{
   white-space:pre-line;
 }
 
+/* ====== Anmeldelser ====== */
+.quotes{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  margin-top:18px;
+}
+
+.quote-card{
+  padding:26px 24px;
+  border-radius:22px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.10);
+}
+
+.quote-card blockquote{
+  font-size:1.08rem;
+  line-height:1.65;
+  color:#f1ebe1;
+  font-weight:600;
+}
+
+.quote-card cite{
+  display:block;
+  margin-top:16px;
+  font-style:normal;
+  font-size:0.9rem;
+  color:#aaa197;
+}
+
 .socials{
   display:flex;
-  gap:22px;
+  gap:14px;
   flex-wrap:wrap;
   margin-top:70px;
 }
 
 .socials a{
-  color:#b3aa9f;
+  display:inline-flex;
+  align-items:center;
+  padding:12px 22px;
+  border-radius:999px;
+  color:#e9e0d4;
   text-decoration:none;
-  border-bottom:1px solid transparent;
+  font-weight:650;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.14);
   transition:0.25s ease;
 }
 
 .socials a:hover{
   color:#fff;
-  border-color:rgba(255,255,255,0.35);
+  background:rgba(255,255,255,0.12);
+  transform:translateY(-2px);
 }
 
 @media(max-width:900px){
@@ -245,6 +369,10 @@ body::after{
 
   .experience-card{
     grid-column:auto;
+  }
+
+  .quotes{
+    grid-template-columns:1fr;
   }
 
   .section{
@@ -318,7 +446,7 @@ body::after{
 
   <section class="hero">
 
-    <img src="banner.PNG" alt="Ronny Trubadur" class="banner" />
+    <img src="banner.PNG" alt="Ronny Trubadur – live musikk" class="banner" />
 
     <div class="intro">
 
@@ -326,21 +454,25 @@ body::after{
         Live musikk • pubrock
       </div>
 
-      <div class="lead">
+      <h1 class="lead">
         Ekte gitar. Ekte vokal. Ekte stemning.
-      </div>
+      </h1>
 
       <div class="sub">
         Rock, country, norske klassikere og låter folk gjerne synger med på.
       </div>
 
+      <div class="eventtypes">
+        Pub · restaurant · firmafest · camping · festival · privat arrangement
+      </div>
+
       <div class="actions">
-        <a href="mailto:ronny.nilsen.studio@gmail.com" class="btn btn-main">
-          Kontakt for booking
+        <a href="mailto:ronny.nilsen.studio@gmail.com?subject=Booking%20av%20Ronny%20Trubadur&body=Hei%20Ronny!%0A%0ADato%3A%0ASted%3A%0AType%20arrangement%3A%0AOmtrentlig%20spilletid%3A%0A%0AHilsen%3A" class="btn btn-main">
+          Book Ronny til ditt arrangement
         </a>
 
         <a href="tel:41357603" class="btn btn-soft">
-          41 35 76 03
+          Ring 41 35 76 03
         </a>
       </div>
 
@@ -360,6 +492,56 @@ body::after{
       <img src="ronny2.jpg" alt="Ronny Trubadur">
       <img src="ronny3.jpg" alt="Ronny Trubadur">
       <img src="ronny4.jpg" alt="Ronny Trubadur">
+    </div>
+
+  </section>
+
+  <!--
+  ============================================================
+   VIDEO – det viktigste du kan legge til.
+   Fjern <!- - og - -> rundt blokken under når du har en video.
+
+   YouTube:  bytt VIDEO_ID i src under med id-en fra YouTube-lenka
+             (delen etter "watch?v=" eller "youtu.be/").
+
+   Facebook-video: gå til videoen → del → "Bygg inn" → kopier
+             iframe-koden og lim den inn i stedet for blokken under.
+  ============================================================
+
+  <section class="section">
+    <div class="section-label">Live</div>
+    <div class="video-frame">
+      <iframe
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        title="Ronny Trubadur live"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </section>
+
+  -->
+
+  <section class="section">
+
+    <div class="section-label">Repertoar</div>
+
+    <div class="repertoire">
+      <span>CCR</span>
+      <span>Johnny Cash</span>
+      <span>Elvis</span>
+      <span>Metallica</span>
+      <span>Eagles</span>
+      <span>Neil Young</span>
+      <span>Bruce Springsteen</span>
+      <span>Oasis</span>
+      <span>Bon Jovi</span>
+      <span>Åge Aleksandersen</span>
+      <span>DumDum Boys</span>
+      <span>CC Cowboys</span>
+    </div>
+
+    <div class="repertoire-note">
+      Et bredt utvalg fra 50-tallet til i dag – og mye mer enn dette. Ønsker du noe spesielt til arrangementet, er det bare å si fra.
     </div>
 
   </section>
@@ -399,10 +581,34 @@ I tillegg til låver, private arrangementer, firmafester og andre oppdrag i Tron
 
   </section>
 
+  <!--
+  ============================================================
+   ANMELDELSER – fyll inn ekte sitater fra arrangører/publikum,
+   så fjerner du <!- - og - -> rundt blokken under.
+   IKKE bruk oppdiktede sitater – be heller en arrangør du har
+   spilt for om én setning de kan stå inne for.
+  ============================================================
+
+  <section class="section">
+    <div class="section-label">Hva folk sier</div>
+    <div class="quotes">
+      <div class="quote-card">
+        <blockquote>«Skriv sitatet her.»</blockquote>
+        <cite>– Navn, sted</cite>
+      </div>
+      <div class="quote-card">
+        <blockquote>«Skriv sitatet her.»</blockquote>
+        <cite>– Navn, sted</cite>
+      </div>
+    </div>
+  </section>
+
+  -->
+
   <div class="socials">
-    <a href="https://www.instagram.com/ronny_nilsen_84" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@ronnytrubadur" target="_blank">TikTok</a>
-    <a href="https://www.facebook.com/share/18RnqpPKvT/?mibextid=wwXIfr" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/ronny_nilsen_84" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@ronnytrubadur" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://www.facebook.com/share/18RnqpPKvT/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
   </div>
 
 </div>

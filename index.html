@@ -18,6 +18,11 @@
 
 <link rel="icon" href="logo.png" />
 
+<!-- ====== Display-skrift (gir plakat-/konsertfølelsen) ====== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <!-- ====== Structured data: hjelper Google forstå at du er en bookbar artist ====== -->
 <script type="application/ld+json">
 {
@@ -40,6 +45,19 @@
 </script>
 
 <style>
+:root{
+  --ink:#f5f2ec;
+  --ink-soft:#d8cfc3;
+  --ink-dim:#b6ada1;
+  --accent:#e0a44e;
+  --accent-line:rgba(224,164,78,0.45);
+  --card:rgba(255,255,255,0.055);
+  --card-strong:rgba(255,255,255,0.07);
+  --line:rgba(255,255,255,0.12);
+  --display:"Oswald",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
 *{
   margin:0;
   padding:0;
@@ -54,8 +72,8 @@ html,body{
 
 body{
   background:linear-gradient(180deg,#1b1712 0%,#131313 45%,#0f0f0f 100%);
-  color:#f4f1ec;
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  font-family:var(--body);
 }
 
 body::after{
@@ -67,6 +85,13 @@ body::after{
     radial-gradient(circle at bottom right, rgba(180,180,180,0.08), transparent 40%);
   pointer-events:none;
   z-index:-1;
+}
+
+a:focus-visible,
+.btn:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:8px;
 }
 
 .wrapper{
@@ -96,43 +121,53 @@ body::after{
   max-width:760px;
 }
 
-.kicker{
-  font-size:0.78rem;
-  letter-spacing:0.2em;
+/* ====== Etikett-system (rav-farget eyebrow) ====== */
+.kicker,
+.section-label{
+  font-family:var(--display);
+  font-size:0.82rem;
+  font-weight:600;
+  letter-spacing:0.22em;
   text-transform:uppercase;
-  color:#c6beb3;
+  color:var(--accent);
   margin-bottom:22px;
 }
 
 .lead{
-  font-size:clamp(1.9rem,4.8vw,4.15rem);
-  line-height:1.02;
-  letter-spacing:-0.06em;
-  font-weight:900;
+  font-family:var(--display);
+  font-size:clamp(2.4rem,6vw,4.6rem);
+  line-height:0.98;
+  letter-spacing:-0.005em;
+  font-weight:700;
+  text-transform:uppercase;
   color:#fffaf2;
 }
 
 .sub{
-  margin-top:30px;
+  margin-top:26px;
   max-width:640px;
   font-size:1.05rem;
-  line-height:1.85;
-  color:#d4cabe;
+  line-height:1.8;
+  color:var(--ink-soft);
 }
 
 .eventtypes{
-  margin-top:18px;
+  margin-top:16px;
   max-width:640px;
-  font-size:0.95rem;
+  font-family:var(--display);
+  font-size:0.92rem;
+  font-weight:500;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
   line-height:1.7;
-  color:#aaa197;
+  color:var(--ink-dim);
 }
 
 .actions{
   display:flex;
   gap:14px;
   flex-wrap:wrap;
-  margin-top:38px;
+  margin-top:36px;
 }
 
 .btn{
@@ -140,16 +175,20 @@ body::after{
   align-items:center;
   justify-content:center;
   min-height:54px;
-  padding:0 28px;
+  padding:0 30px;
   border-radius:999px;
   text-decoration:none;
-  font-weight:750;
-  transition:0.25s ease;
+  font-family:var(--display);
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  transition:transform 0.2s ease, background 0.2s ease;
 }
 
 .btn-main{
   background:#f1eee7;
-  color:#111;
+  color:#141414;
 }
 
 .btn-main:hover{
@@ -165,12 +204,13 @@ body::after{
 
 .btn-soft:hover{
   background:rgba(255,255,255,0.11);
+  transform:translateY(-2px);
 }
 
 .booking-note{
   margin-top:20px;
-  color:#aaa197;
-  font-size:0.92rem;
+  color:var(--ink-dim);
+  font-size:0.95rem;
   line-height:1.7;
 }
 
@@ -178,7 +218,7 @@ body::after{
   margin-top:18px;
   padding:18px;
   border-radius:28px;
-  background:rgba(255,255,255,0.055);
+  background:var(--card);
   border:1px solid rgba(255,255,255,0.09);
   box-shadow:0 35px 100px rgba(0,0,0,0.30);
 }
@@ -215,14 +255,6 @@ body::after{
   padding:92px 0 0;
 }
 
-.section-label{
-  font-size:0.78rem;
-  letter-spacing:0.2em;
-  text-transform:uppercase;
-  color:#c6beb3;
-  margin-bottom:22px;
-}
-
 /* ====== Video ====== */
 .video-frame{
   position:relative;
@@ -243,7 +275,7 @@ body::after{
   border:0;
 }
 
-/* ====== Repertoar ====== */
+/* ====== Repertoar (setliste-følelse) ====== */
 .repertoire{
   display:flex;
   flex-wrap:wrap;
@@ -254,18 +286,28 @@ body::after{
 .repertoire span{
   display:inline-flex;
   align-items:center;
-  padding:9px 16px;
+  padding:10px 18px;
   border-radius:999px;
-  font-size:0.92rem;
-  color:#e9e0d4;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.12);
+  font-family:var(--display);
+  font-size:0.9rem;
+  font-weight:500;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+  color:#ece3d6;
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--line);
+  transition:border-color 0.2s ease, color 0.2s ease;
+}
+
+.repertoire span:hover{
+  color:#fff;
+  border-color:var(--accent-line);
 }
 
 .repertoire-note{
-  margin-top:18px;
-  color:#aaa197;
-  font-size:0.95rem;
+  margin-top:20px;
+  color:var(--ink-dim);
+  font-size:0.97rem;
   line-height:1.7;
 }
 
@@ -276,28 +318,100 @@ body::after{
 }
 
 .info-card{
-  padding:24px;
+  padding:26px 24px;
   border-radius:22px;
-  background:rgba(255,255,255,0.07);
+  background:var(--card-strong);
   border:1px solid rgba(255,255,255,0.10);
   backdrop-filter:blur(12px);
 }
 
-.experience-card{
-  grid-column:1 / -1;
-}
-
 .info-card h2{
-  font-size:1.05rem;
+  font-family:var(--display);
+  font-size:1.4rem;
+  font-weight:600;
+  letter-spacing:0.01em;
+  text-transform:uppercase;
   margin-bottom:14px;
   color:#fff7ed;
 }
 
 .info-card p{
-  color:#d1c7bb;
-  line-height:1.85;
-  font-size:0.98rem;
+  color:var(--ink-soft);
+  line-height:1.8;
+  font-size:0.99rem;
   white-space:pre-line;
+}
+
+/* ====== Erfaring som turnéliste (signaturen) ====== */
+.tour{
+  grid-column:1 / -1;
+  padding:30px 28px;
+  border-radius:22px;
+  background:var(--card-strong);
+  border:1px solid rgba(255,255,255,0.10);
+  backdrop-filter:blur(12px);
+}
+
+.tour h2{
+  font-family:var(--display);
+  font-size:1.4rem;
+  font-weight:600;
+  letter-spacing:0.01em;
+  text-transform:uppercase;
+  color:#fff7ed;
+  margin-bottom:6px;
+}
+
+.tour-intro{
+  color:var(--ink-dim);
+  font-size:0.95rem;
+  margin-bottom:14px;
+}
+
+.tour-list{
+  list-style:none;
+}
+
+.tour-list li{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:18px;
+  padding:15px 2px;
+  border-top:1px solid var(--line);
+  transition:color 0.2s ease;
+}
+
+.tour-list li:last-child{
+  border-bottom:1px solid var(--line);
+}
+
+.tour-venue{
+  font-family:var(--display);
+  font-size:1.12rem;
+  font-weight:500;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  color:#efe7da;
+}
+
+.tour-list li:hover .tour-venue{
+  color:#fff;
+}
+
+.tour-place{
+  font-size:0.86rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--ink-dim);
+  white-space:nowrap;
+}
+
+.tour-foot{
+  margin-top:20px;
+  color:var(--ink-soft);
+  font-size:0.97rem;
+  line-height:1.75;
 }
 
 /* ====== Anmeldelser ====== */
@@ -309,50 +423,99 @@ body::after{
 }
 
 .quote-card{
-  padding:26px 24px;
+  padding:28px 26px;
   border-radius:22px;
-  background:rgba(255,255,255,0.06);
+  background:var(--card);
   border:1px solid rgba(255,255,255,0.10);
 }
 
 .quote-card blockquote{
-  font-size:1.08rem;
-  line-height:1.65;
+  font-size:1.12rem;
+  line-height:1.6;
   color:#f1ebe1;
-  font-weight:600;
+  font-weight:500;
 }
 
 .quote-card cite{
   display:block;
   margin-top:16px;
   font-style:normal;
-  font-size:0.9rem;
-  color:#aaa197;
+  font-family:var(--display);
+  font-size:0.85rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--ink-dim);
+}
+
+/* ====== Booking-seksjon nederst (driver mål nr. 1) ====== */
+.cta-band{
+  margin-top:92px;
+  padding:40px 34px;
+  border-radius:26px;
+  background:
+    linear-gradient(180deg, rgba(224,164,78,0.10), rgba(224,164,78,0.03)),
+    var(--card-strong);
+  border:1px solid var(--accent-line);
+  box-shadow:0 30px 90px rgba(0,0,0,0.35), 0 0 70px rgba(224,164,78,0.10);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  flex-wrap:wrap;
+}
+
+.cta-band-title{
+  font-family:var(--display);
+  font-size:1.85rem;
+  font-weight:700;
+  letter-spacing:0.01em;
+  text-transform:uppercase;
+  color:#fffaf2;
+  margin-top:8px;
+}
+
+.cta-band-sub{
+  margin-top:10px;
+  max-width:420px;
+  color:var(--ink-soft);
+  font-size:1rem;
+  line-height:1.65;
+}
+
+.cta-band-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
 }
 
 .socials{
   display:flex;
   gap:14px;
   flex-wrap:wrap;
-  margin-top:70px;
+  margin-top:42px;
 }
 
 .socials a{
   display:inline-flex;
   align-items:center;
-  padding:12px 22px;
+  padding:12px 24px;
   border-radius:999px;
-  color:#e9e0d4;
+  font-family:var(--display);
+  font-size:0.9rem;
+  font-weight:500;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:#ece3d6;
   text-decoration:none;
-  font-weight:650;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.14);
-  transition:0.25s ease;
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--line);
+  transition:transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .socials a:hover{
   color:#fff;
-  background:rgba(255,255,255,0.12);
+  background:rgba(255,255,255,0.11);
+  border-color:var(--accent-line);
   transform:translateY(-2px);
 }
 
@@ -365,10 +528,6 @@ body::after{
   .info{
     grid-template-columns:1fr;
     gap:18px;
-  }
-
-  .experience-card{
-    grid-column:auto;
   }
 
   .quotes{
@@ -386,6 +545,15 @@ body::after{
   .btn{
     width:100%;
   }
+
+  .cta-band{
+    margin-top:72px;
+  }
+
+  .cta-band-actions{
+    width:100%;
+    flex-direction:column;
+  }
 }
 
 @media(max-width:600px){
@@ -396,10 +564,6 @@ body::after{
   .hero{
     padding-top:10px;
     padding-bottom:42px;
-  }
-
-  .lead{
-    font-size:2.2rem;
   }
 
   .sub{
@@ -429,12 +593,41 @@ body::after{
   }
 
   .info-card{
-    padding:22px 20px;
+    padding:24px 20px;
     border-radius:18px;
   }
 
+  .tour{
+    padding:26px 20px;
+  }
+
+  .tour-list li{
+    flex-direction:column;
+    gap:4px;
+    align-items:flex-start;
+  }
+
+  .tour-place{
+    white-space:normal;
+  }
+
+  .cta-band{
+    padding:30px 22px;
+  }
+
   .socials{
-    margin-top:52px;
+    margin-top:36px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{
+    transition:none !important;
+  }
+
+  .visual-grid img:nth-child(3),
+  .visual-grid img:nth-child(5){
+    transform:none;
   }
 }
 </style>
@@ -455,7 +648,7 @@ body::after{
       </div>
 
       <h1 class="lead">
-        Ekte gitar. Ekte vokal. Ekte stemning.
+        Ekte gitar.<br>Ekte vokal.<br>Ekte stemning.
       </h1>
 
       <div class="sub">
@@ -463,7 +656,7 @@ body::after{
       </div>
 
       <div class="eventtypes">
-        Pub · restaurant · firmafest · camping · festival · privat arrangement
+        Pub · restaurant · firmafest · camping · festival · privat
       </div>
 
       <div class="actions">
@@ -488,10 +681,10 @@ body::after{
 
     <div class="visual-grid">
       <img src="ronny.jpg" alt="Ronny Trubadur foran rødt gjerde med graffiti" onerror="this.style.display='none'">
-      <img src="ronny1.jpg" alt="Ronny Trubadur i Metallica-skjorte mot murvegg" onerror="this.style.display='none'">
-      <img src="ronny2.jpg" alt="Ronny Trubadur foran gammel dør i Burano" onerror="this.style.display='none'">
-      <img src="ronny3.jpg" alt="Ronny Trubadur foran rosa graffiti" onerror="this.style.display='none'">
-      <img src="ronny4.jpg" alt="Ronny Trubadur foran fargerik veggmaleri" onerror="this.style.display='none'">
+      <img src="ronny1.jpg" alt="Ronny Trubadur i Metallica-skjorte mot murvegg" loading="lazy" onerror="this.style.display='none'">
+      <img src="ronny2.jpg" alt="Ronny Trubadur foran gammel dør i Burano" loading="lazy" onerror="this.style.display='none'">
+      <img src="ronny3.jpg" alt="Ronny Trubadur foran rosa graffiti" loading="lazy" onerror="this.style.display='none'">
+      <img src="ronny4.jpg" alt="Ronny Trubadur foran fargerik veggmaleri" loading="lazy" onerror="this.style.display='none'">
     </div>
 
   </section>
@@ -504,7 +697,7 @@ body::after{
    YouTube:  bytt VIDEO_ID i src under med id-en fra YouTube-lenka
              (delen etter "watch?v=" eller "youtu.be/").
 
-   Facebook-video: gå til videoen → del → "Bygg inn" → kopier
+   Facebook-video: gå til videoen -> del -> "Bygg inn" -> kopier
              iframe-koden og lim den inn i stedet for blokken under.
   ============================================================
 
@@ -554,7 +747,8 @@ body::after{
         <h2>Bak gitaren</h2>
         <p>Trubadur med base i Trondheim / Aure.
 Lang erfaring fra scene, duo og band.
-Spiller både akustisk og elektrisk med eget lyd- og lysanlegg.</p>
+Spiller både akustisk og elektrisk med eget lyd- og lysanlegg.
+Spiller i hele Trøndelag og på Nordmøre – reiser gjerne til ditt arrangement.</p>
       </div>
 
       <div class="info-card">
@@ -564,19 +758,28 @@ Pris avtales etter arrangement og reisevei.
 Oppdrag fra 5000 kr.</p>
       </div>
 
-      <div class="info-card experience-card">
-        <h2>Erfaring</h2>
-        <p>Har spilt på blant annet:
-• Røros Alpinsenter Hummelfjell
-• Ilsvika Restaurant
-• Kyrksæterøra Restaurant
-• O75 Orkanger
-• Agdeneset
-• Tordenskjold Kristiansund
-• Land og Strand (Aure kommune)
-I tillegg til låver, private arrangementer, firmafester og andre oppdrag i Trondheim, Molde og omegn.</p>
-      </div>
+    </div>
 
+  </section>
+
+  <section class="section">
+
+    <div class="tour">
+      <div class="section-label">Spilt på</div>
+      <h2>Et utvalg spillesteder</h2>
+      <p class="tour-intro">Steder jeg har spilt rundt om i Midt-Norge.</p>
+
+      <ul class="tour-list">
+        <li><span class="tour-venue">Røros Alpinsenter</span><span class="tour-place">Hummelfjell</span></li>
+        <li><span class="tour-venue">Ilsvika Restaurant</span><span class="tour-place">Trondheim</span></li>
+        <li><span class="tour-venue">Kyrksæterøra Restaurant</span><span class="tour-place"></span></li>
+        <li><span class="tour-venue">O75</span><span class="tour-place">Orkanger</span></li>
+        <li><span class="tour-venue">Agdeneset</span><span class="tour-place"></span></li>
+        <li><span class="tour-venue">Tordenskjold</span><span class="tour-place">Kristiansund</span></li>
+        <li><span class="tour-venue">Land og Strand</span><span class="tour-place">Aure</span></li>
+      </ul>
+
+      <p class="tour-foot">I tillegg til låver, private arrangementer, firmafester og andre oppdrag i Trondheim, Molde og omegn.</p>
     </div>
 
   </section>
@@ -594,16 +797,32 @@ I tillegg til låver, private arrangementer, firmafester og andre oppdrag i Tron
     <div class="quotes">
       <div class="quote-card">
         <blockquote>«Skriv sitatet her.»</blockquote>
-        <cite>– Navn, sted</cite>
+        <cite>Navn, sted</cite>
       </div>
       <div class="quote-card">
         <blockquote>«Skriv sitatet her.»</blockquote>
-        <cite>– Navn, sted</cite>
+        <cite>Navn, sted</cite>
       </div>
     </div>
   </section>
 
   -->
+
+  <section class="cta-band">
+    <div>
+      <div class="section-label">Booking</div>
+      <p class="cta-band-title">Ledig for spilleoppdrag</p>
+      <p class="cta-band-sub">Pub, fest, camping eller festival – ta kontakt, så finner vi en dato som passer.</p>
+    </div>
+    <div class="cta-band-actions">
+      <a href="mailto:ronny.nilsen.studio@gmail.com?subject=Booking%20av%20Ronny%20Trubadur&body=Hei%20Ronny!%0A%0ADato%3A%0ASted%3A%0AType%20arrangement%3A%0AOmtrentlig%20spilletid%3A%0A%0AHilsen%3A" class="btn btn-main">
+        Book Ronny
+      </a>
+      <a href="tel:41357603" class="btn btn-soft">
+        41 35 76 03
+      </a>
+    </div>
+  </section>
 
   <div class="socials">
     <a href="https://www.instagram.com/ronny_nilsen_84" target="_blank" rel="noopener">Instagram</a>

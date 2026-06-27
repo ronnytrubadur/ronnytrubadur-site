@@ -231,24 +231,23 @@ a:focus-visible,
 
 .visual-grid img{
   width:100%;
-  height:100%;
   display:block;
   object-fit:cover;
+  object-position:center 30%;
   border-radius:18px;
   box-shadow:0 24px 70px rgba(0,0,0,0.34);
 }
 
-.visual-grid img:first-child{
-  grid-column:1 / -1;
-  max-height:720px;
+/* to liggende bilder øverst */
+.visual-grid img:nth-child(1),
+.visual-grid img:nth-child(2){
+  aspect-ratio:4 / 3;
 }
 
-.visual-grid img:nth-child(3){
-  transform:translateY(28px);
-}
-
-.visual-grid img:nth-child(5){
-  transform:translateY(-10px);
+/* to stående bilder nederst */
+.visual-grid img:nth-child(3),
+.visual-grid img:nth-child(4){
+  aspect-ratio:3 / 4;
 }
 
 .section{
@@ -583,15 +582,6 @@ a:focus-visible,
     border-radius:14px;
   }
 
-  .visual-grid img:first-child{
-    max-height:none;
-  }
-
-  .visual-grid img:nth-child(3),
-  .visual-grid img:nth-child(5){
-    transform:none;
-  }
-
   .info-card{
     padding:24px 20px;
     border-radius:18px;
@@ -680,11 +670,10 @@ a:focus-visible,
   <section class="poster-section">
 
     <div class="visual-grid">
-      <img src="ronny.jpg" alt="Ronny Trubadur foran rødt gjerde med graffiti" onerror="this.style.display='none'">
+      <img src="ronny3.jpg" alt="Ronny Trubadur foran rosa graffiti" onerror="this.style.display='none'">
+      <img src="ronny.jpg" alt="Ronny Trubadur foran rødt gjerde med graffiti" loading="lazy" onerror="this.style.display='none'">
       <img src="ronny1.jpg" alt="Ronny Trubadur i Metallica-skjorte mot murvegg" loading="lazy" onerror="this.style.display='none'">
       <img src="ronny2.jpg" alt="Ronny Trubadur foran gammel dør i Burano" loading="lazy" onerror="this.style.display='none'">
-      <img src="ronny3.jpg" alt="Ronny Trubadur foran rosa graffiti" loading="lazy" onerror="this.style.display='none'">
-      <img src="ronny4.jpg" alt="Ronny Trubadur foran fargerik veggmaleri" loading="lazy" onerror="this.style.display='none'">
     </div>
 
   </section>

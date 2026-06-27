@@ -44,6 +44,23 @@
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicEvent",
+  "name": "Ronny Trubadur – live på Skuta Restaurant",
+  "startDate": "2026-07-18",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "performer": { "@type": "MusicGroup", "name": "Ronny Trubadur" },
+  "location": {
+    "@type": "Place",
+    "name": "Skuta Restaurant",
+    "address": { "@type": "PostalAddress", "addressLocality": "Hitra", "addressCountry": "NO" }
+  },
+  "url": "https://www.ronnytrubadur.no/"
+}
+</script>
+
 <style>
 :root{
   --ink:#f5f2ec;
@@ -413,6 +430,91 @@ a:focus-visible,
   line-height:1.75;
 }
 
+/* ====== Kommende spilledatoer ====== */
+.gigs-title{
+  font-family:var(--display);
+  font-size:clamp(1.8rem,4vw,2.6rem);
+  font-weight:700;
+  letter-spacing:0.01em;
+  text-transform:uppercase;
+  color:#fffaf2;
+  margin-bottom:22px;
+}
+
+.gig-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.gig{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  padding:18px 22px;
+  border-radius:18px;
+  background:var(--card-strong);
+  border:1px solid var(--line);
+  transition:border-color 0.2s ease, transform 0.2s ease;
+}
+
+.gig:hover{
+  border-color:var(--accent-line);
+  transform:translateY(-2px);
+}
+
+.gig-date{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-width:66px;
+  padding:10px 8px;
+  border-radius:12px;
+  background:rgba(224,164,78,0.12);
+  border:1px solid var(--accent-line);
+}
+
+.gig-day{
+  font-family:var(--display);
+  font-size:1.7rem;
+  font-weight:700;
+  line-height:1;
+  color:var(--accent);
+}
+
+.gig-mon{
+  font-family:var(--display);
+  font-size:0.78rem;
+  font-weight:600;
+  letter-spacing:0.12em;
+  color:#e7c79a;
+  margin-top:3px;
+}
+
+.gig-info{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.gig-venue{
+  font-family:var(--display);
+  font-size:1.25rem;
+  font-weight:600;
+  letter-spacing:0.02em;
+  text-transform:uppercase;
+  color:#efe7da;
+}
+
+.gig-place{
+  font-size:0.9rem;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:var(--ink-dim);
+}
+
 /* ====== Anmeldelser ====== */
 .quotes{
   display:grid;
@@ -675,6 +777,43 @@ a:focus-visible,
       <img src="ronny1.jpg" alt="Ronny Trubadur i Metallica-skjorte mot murvegg" loading="lazy" onerror="this.style.display='none'">
       <img src="ronny2.jpg" alt="Ronny Trubadur foran gammel dør i Burano" loading="lazy" onerror="this.style.display='none'">
     </div>
+
+  </section>
+
+  <section class="section">
+
+    <div class="section-label">Kommende</div>
+    <h2 class="gigs-title">Spilledatoer</h2>
+
+    <!--
+      Legg til ny dato ved å kopiere en <li class="gig"> ... </li>-blokk
+      og endre dag, måned, sted og navn. Slett gamle datoer når de er passert.
+    -->
+    <ul class="gig-list">
+
+      <li class="gig">
+        <div class="gig-date">
+          <span class="gig-day">18</span>
+          <span class="gig-mon">JUL</span>
+        </div>
+        <div class="gig-info">
+          <span class="gig-venue">Skuta Restaurant</span>
+          <span class="gig-place">Hitra</span>
+        </div>
+      </li>
+
+      <li class="gig">
+        <div class="gig-date">
+          <span class="gig-day">15</span>
+          <span class="gig-mon">AUG</span>
+        </div>
+        <div class="gig-info">
+          <span class="gig-venue">Privat arrangement</span>
+          <span class="gig-place">Rennebu</span>
+        </div>
+      </li>
+
+    </ul>
 
   </section>
 

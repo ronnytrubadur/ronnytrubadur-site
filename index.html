@@ -11,7 +11,7 @@
 
 <meta property="og:title" content="Ronny Trubadur – live musikk" />
 <meta property="og:description" content="Ekte gitar. Ekte vokal. Ekte stemning. Book trubadur i Trondheim og på Nordmøre." />
-<meta property="og:image" content="https://www.ronnytrubadur.no/banner.PNG" />
+<meta property="og:image" content="https://www.ronnytrubadur.no/banner.png" />
 <meta property="og:url" content="https://www.ronnytrubadur.no/" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -30,7 +30,7 @@
   "@type": "MusicGroup",
   "name": "Ronny Trubadur",
   "url": "https://www.ronnytrubadur.no/",
-  "image": "https://www.ronnytrubadur.no/banner.PNG",
+  "image": "https://www.ronnytrubadur.no/banner.png",
   "genre": ["Pubrock", "Rock", "Country", "Norske klassikere"],
   "description": "Solo trubadur med gitar og vokal. Spiller pub, restaurant, firmafest, camping, festival og private arrangement i Trondheim og på Nordmøre.",
   "areaServed": ["Trondheim", "Aure", "Kristiansund", "Molde", "Orkanger", "Røros", "Trøndelag", "Nordmøre"],
@@ -74,7 +74,7 @@
 :root{
   --ink:#f5f2ec;
   --ink-soft:#d8cfc3;
-  --ink-dim:#b6ada1;
+  --ink-dim:#c9c0b3;
   --accent:#e0a44e;
   --accent-line:rgba(224,164,78,0.45);
   --card:rgba(255,255,255,0.055);
@@ -686,11 +686,19 @@ a:focus-visible,
   }
 
   .visual-grid{
+    grid-template-columns:1fr;
     gap:12px;
   }
 
   .visual-grid img{
     border-radius:14px;
+  }
+
+  .visual-grid img:nth-child(1),
+  .visual-grid img:nth-child(2),
+  .visual-grid img:nth-child(3),
+  .visual-grid img:nth-child(4){
+    aspect-ratio:4 / 3;
   }
 
   .info-card{
@@ -740,7 +748,7 @@ a:focus-visible,
 
   <section class="hero">
 
-    <img src="banner.PNG" alt="Ronny Trubadur – live musikk" class="banner" />
+    <img src="banner.png" alt="Ronny Trubadur – live musikk" class="banner" />
 
     <div class="intro">
 
@@ -781,10 +789,10 @@ a:focus-visible,
   <section class="poster-section">
 
     <div class="visual-grid">
-      <img src="ronny3.jpg" alt="Ronny Trubadur foran rosa graffiti" onerror="this.style.display='none'">
-      <img src="ronny.jpg" alt="Ronny Trubadur foran rødt gjerde med graffiti" loading="lazy" onerror="this.style.display='none'">
-      <img src="ronny1.jpg" alt="Ronny Trubadur i Metallica-skjorte mot murvegg" loading="lazy" onerror="this.style.display='none'">
-      <img src="ronny2.jpg" alt="Ronny Trubadur foran gammel dør i Burano" loading="lazy" onerror="this.style.display='none'">
+      <img src="ronny-scene-vegg.jpg" alt="Scene med gitar og mikrofon foran teglvegg" onerror="this.style.display='none'">
+      <img src="ronny-scene-lys.jpg" alt="Koselig scene med lyslenker og gitarer" loading="lazy" onerror="this.style.display='none'">
+      <img src="ronny-live-teltet.jpg" alt="Ronny Trubadur spiller live i pub-teltet" loading="lazy" onerror="this.style.display='none'">
+      <img src="ronny-portrett.jpg" alt="Portrett av Ronny Trubadur med gitar" loading="lazy" onerror="this.style.display='none'">
     </div>
 
   </section>
@@ -881,7 +889,7 @@ Spiller i hele Trøndelag og på Nordmøre – reiser gjerne til ditt arrangemen
         <h2>Spilletid & pris</h2>
         <p>Vanlig oppsett er 3 x 45 minutter med lyd og lys inkludert.
 Pris avtales etter arrangement og reisevei.
-Oppdrag fra 5000 kr.</p>
+Oppdrag fra kr 6 200, i tråd med Creos anbefalte minstesats for konsert.</p>
       </div>
 
     </div>

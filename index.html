@@ -234,24 +234,27 @@ h1{
 .image-stack{
   display:grid;
   grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
   gap:16px;
+  height:460px;
 }
 
 .image-grid img,
 .image-stack img{
   width:100%;
   height:100%;
+  min-height:0;
   object-fit:cover;
   border-radius:18px;
   border:1px solid var(--line);
 }
 
 .image-grid > img{
-  min-height:460px;
+  height:460px;
 }
 
-.image-stack img{
-  min-height:222px;
+.image-stack img:first-child{
+  grid-column:1 / -1;
 }
 
 /* MUSIC */
@@ -431,9 +434,20 @@ h1{
 
 @media(max-width:900px){
   .quick{grid-template-columns:repeat(2,1fr)}
-  .image-grid{grid-template-columns:1fr}
-  .image-grid > img{min-height:auto;aspect-ratio:4/3}
-  .image-stack img{min-height:auto;aspect-ratio:4/3}
+  .image-grid{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .image-stack{display:contents}
+  .image-grid > img,
+  .image-stack img{
+    width:100%;
+    height:auto;
+    min-height:0;
+    aspect-ratio:4 / 3;
+    object-fit:cover;
+  }
+  .image-stack img:first-child{grid-column:auto}
   .two-col{grid-template-columns:1fr}
 }
 
@@ -448,7 +462,6 @@ h1{
   .quick{grid-template-columns:1fr 1fr;gap:10px}
   .quick-item{padding:16px 14px}
   .section{padding-top:66px}
-  .image-stack{grid-template-columns:1fr}
   .venues{grid-template-columns:1fr}
   .cta{padding:28px 20px;margin-top:70px}
   .contact-row{flex-direction:column}
@@ -518,6 +531,7 @@ h1{
       <div class="image-stack">
         <img src="ronny-scene-lys.jpg" alt="Sceneoppsett med lys" loading="lazy" onerror="this.style.display='none'">
         <img src="ronnyakustisk.jpg" alt="Ronny Trubadur med akustisk gitar" loading="lazy" onerror="this.style.display='none'">
+        <img src="ronny-portrett.jpg" alt="Ronny Trubadur med gitar" loading="lazy" onerror="this.style.display='none'">
       </div>
     </div>
   </section>

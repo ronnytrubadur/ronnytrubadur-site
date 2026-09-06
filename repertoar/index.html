@@ -1,849 +1,650 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Repertoar | Ronny Trubadur</title>
-  <meta name="description" content="Se repertoaret til Ronny Trubadur – rock, country, norske klassikere, pubfavoritter og kjente låter fra flere tiår.">
-  <link rel="canonical" href="https://www.ronnytrubadur.no/repertoar/">
+<title>Trubadur Trondheim | Ronny Trubadur – Live musikk til fest og arrangement</title>
+<meta name="description" content="Book trubadur i Trondheim og Trøndelag. Ronny Trubadur spiller live musikk til pub, firmafest, bursdag og private arrangement. 3 × 45 min fra 8 000 kr." />
+<link rel="canonical" href="https://www.ronnytrubadur.no/" />
 
-  <meta property="og:title" content="Repertoar | Ronny Trubadur">
-  <meta property="og:description" content="Se låtene Ronny Trubadur har med seg på spillejobb.">
-  <meta property="og:image" content="https://www.ronnytrubadur.no/banner.PNG">
-  <meta property="og:url" content="https://www.ronnytrubadur.no/repertoar/">
-  <meta property="og:type" content="website">
+<meta property="og:title" content="Trubadur Trondheim | Ronny Trubadur" />
+<meta property="og:description" content="Live musikk til pub, fest, firma og private arrangement i Trondheim, Trøndelag og resten av Norge." />
+<meta property="og:image" content="https://www.ronnytrubadur.no/banner.PNG" />
+<meta property="og:url" content="https://www.ronnytrubadur.no/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="icon" href="../logo.png">
+<link rel="icon" href="logo.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --ink:#f5f2ec;
-      --ink-soft:#d8cfc3;
-      --ink-dim:#bdb4a8;
-      --accent:#e0a44e;
-      --accent-line:rgba(224,164,78,0.42);
-      --card:rgba(255,255,255,0.055);
-      --line:rgba(255,255,255,0.12);
-      --display:"Oswald",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      --body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ronnytrubadur.no/#website",
+      "url": "https://www.ronnytrubadur.no/",
+      "name": "Ronny Trubadur",
+      "inLanguage": "nb-NO"
+    },
+    {
+      "@type": "MusicGroup",
+      "@id": "https://www.ronnytrubadur.no/#artist",
+      "name": "Ronny Trubadur",
+      "url": "https://www.ronnytrubadur.no/",
+      "image": "https://www.ronnytrubadur.no/banner.PNG",
+      "description": "Trubadur i Trondheim med live musikk til pub, fest, firmafest, bursdag og private arrangement. Tar oppdrag i Trøndelag og hele Norge.",
+      "genre": ["Rock", "Country", "Pop", "Blues", "Norske klassikere"],
+      "areaServed": ["Trondheim", "Trøndelag", "Norge"],
+      "telephone": "+4741357603",
+      "email": "booking@ronnytrubadur.no",
+      "sameAs": [
+        "https://www.tiktok.com/@ronnytrubadur",
+        "https://www.facebook.com/share/19FKewCNw5/?mibextid=wwXIfr"
+      ]
     }
+  ]
+}
+</script>
 
-    * { box-sizing:border-box; margin:0; padding:0; }
-    html { scroll-behavior:smooth; }
+<style>
+:root{
+  --bg:#0d0d0d;
+  --bg-soft:#151515;
+  --card:#181818;
+  --text:#f4f1eb;
+  --muted:#c6beb2;
+  --accent:#d89a3d;
+  --accent-soft:#f0c98a;
+  --line:rgba(255,255,255,.10);
+  --display:"Oswald",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
 
-    body {
-      min-height:100vh;
-      background:
-        radial-gradient(circle at top center, rgba(198,132,54,0.16), transparent 36rem),
-        linear-gradient(180deg,#1b1712 0%,#131313 42%,#0f0f0f 100%);
-      color:var(--ink);
-      font-family:var(--body);
-    }
+*{margin:0;padding:0;box-sizing:border-box}
 
-    a { color:inherit; }
+html{scroll-behavior:smooth}
 
-    a:focus-visible,
-    input:focus-visible {
-      outline:2px solid var(--accent);
-      outline-offset:3px;
-    }
+body{
+  background:
+    radial-gradient(circle at 50% 0%, rgba(216,154,61,.12), transparent 34rem),
+    var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  line-height:1.6;
+}
 
-    .wrapper {
-      width:min(1120px, calc(100% - 28px));
-      margin:0 auto;
-      padding:22px 0 72px;
-    }
+img{max-width:100%;display:block}
 
-    .topbar {
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      margin-bottom:28px;
-    }
+a{color:inherit}
 
-    .back-link {
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      color:var(--ink-soft);
-      text-decoration:none;
-      font-family:var(--display);
-      font-size:0.92rem;
-      font-weight:500;
-      letter-spacing:0.05em;
-      text-transform:uppercase;
-    }
+.wrap{
+  width:min(1160px, calc(100% - 32px));
+  margin:0 auto;
+}
 
-    .back-link:hover { color:#fff; }
+/* HERO */
+.hero{
+  padding:22px 0 64px;
+}
 
-    .small-booking {
-      color:var(--accent);
-      text-decoration:none;
-      font-family:var(--display);
-      font-size:0.92rem;
-      font-weight:600;
-      letter-spacing:0.05em;
-      text-transform:uppercase;
-    }
+.hero-banner{
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 30px 90px rgba(0,0,0,.42);
+}
 
-    .hero { padding:6px 0 54px; }
+.hero-banner img{
+  width:100%;
+  height:auto;
+}
 
-    .banner {
-      width:100%;
-      max-width:920px;
-      display:block;
-      margin:0 auto 46px;
-      border-radius:22px;
-      border:1px solid rgba(255,255,255,0.10);
-      box-shadow:0 28px 90px rgba(0,0,0,0.42);
-    }
+.hero-copy{
+  max-width:820px;
+  padding-top:54px;
+}
 
-    .hero-copy { max-width:760px; }
+.eyebrow{
+  font-family:var(--display);
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:16px;
+}
 
-    .kicker {
-      margin-bottom:16px;
-      color:var(--accent);
-      font-family:var(--display);
-      font-size:0.82rem;
-      font-weight:600;
-      letter-spacing:0.22em;
-      text-transform:uppercase;
-    }
+h1{
+  font-family:var(--display);
+  font-size:clamp(2.8rem,7vw,5.8rem);
+  line-height:.98;
+  text-transform:uppercase;
+  letter-spacing:-.015em;
+}
 
-    h1 {
-      font-family:var(--display);
-      font-size:clamp(2.9rem,8vw,5.6rem);
-      line-height:0.95;
-      text-transform:uppercase;
-      color:#fffaf2;
-      letter-spacing:-0.02em;
-    }
+.hero-sub{
+  max-width:700px;
+  margin-top:22px;
+  color:var(--muted);
+  font-size:1.08rem;
+}
 
-    .intro {
-      max-width:690px;
-      margin-top:24px;
-      color:var(--ink-soft);
-      font-size:1.06rem;
-      line-height:1.8;
-    }
+.hero-price{
+  margin-top:20px;
+  font-family:var(--display);
+  font-size:1.2rem;
+  font-weight:600;
+  color:var(--accent-soft);
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
 
-    .intro + .intro { margin-top:12px; }
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
 
-    .toolbar {
-      margin:0 0 26px;
-      padding:22px;
-      border-radius:20px;
-      background:var(--card);
-      border:1px solid var(--line);
-    }
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:0 26px;
+  border-radius:999px;
+  text-decoration:none;
+  font-family:var(--display);
+  font-size:.95rem;
+  font-weight:600;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  transition:.2s ease;
+}
 
-    .search-label {
-      display:block;
-      margin-bottom:10px;
-      color:var(--ink-dim);
-      font-family:var(--display);
-      font-size:0.82rem;
-      font-weight:500;
-      letter-spacing:0.10em;
-      text-transform:uppercase;
-    }
+.btn-main{
+  background:var(--accent);
+  color:#16110b;
+}
 
-    .search-row {
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
+.btn-main:hover{transform:translateY(-2px);filter:brightness(1.06)}
 
-    #song-search {
-      width:100%;
-      min-height:52px;
-      padding:0 17px;
-      border:1px solid rgba(255,255,255,0.17);
-      border-radius:12px;
-      background:rgba(0,0,0,0.20);
-      color:#fff;
-      font:inherit;
-      font-size:16px;
-    }
+.btn-soft{
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.04);
+  color:var(--text);
+}
 
-    #song-search::placeholder { color:#948c82; }
+.btn-soft:hover{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,.08);
+}
 
-    .count {
-      min-width:max-content;
-      color:var(--accent);
-      font-family:var(--display);
-      font-size:0.95rem;
-      font-weight:600;
-      letter-spacing:0.05em;
-      text-transform:uppercase;
-    }
+/* QUICK FACTS */
+.quick{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin-top:44px;
+}
 
-    .alphabet {
-      display:flex;
-      gap:8px;
-      overflow-x:auto;
-      padding:0 0 18px;
-      margin-bottom:12px;
-      scrollbar-width:thin;
-    }
+.quick-item{
+  padding:20px 18px;
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:16px;
+}
 
-    .alphabet a {
-      flex:0 0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-width:38px;
-      height:38px;
-      padding:0 10px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      color:var(--ink-soft);
-      text-decoration:none;
-      font-family:var(--display);
-      font-size:0.88rem;
-      font-weight:600;
-    }
+.quick-item strong{
+  display:block;
+  font-family:var(--display);
+  font-size:1.1rem;
+  text-transform:uppercase;
+  color:#fff;
+  margin-bottom:4px;
+}
 
-    .alphabet a:hover {
-      border-color:var(--accent-line);
-      color:#fff;
-    }
+.quick-item span{
+  color:var(--muted);
+  font-size:.92rem;
+}
 
-    .letter-group {
-      margin-top:22px;
-      padding:24px;
-      border-radius:20px;
-      background:var(--card);
-      border:1px solid var(--line);
-    }
+/* SECTIONS */
+.section{
+  padding:82px 0 0;
+}
 
-    .letter-group h2 {
-      margin-bottom:10px;
-      color:var(--accent);
-      font-family:var(--display);
-      font-size:1.55rem;
-      line-height:1;
-      font-weight:700;
-    }
+.section-head{
+  max-width:760px;
+  margin-bottom:28px;
+}
 
-    .song-list {
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      column-gap:30px;
-    }
+.section h2{
+  font-family:var(--display);
+  font-size:clamp(2rem,4.5vw,3.4rem);
+  line-height:1.05;
+  text-transform:uppercase;
+}
 
-    .song-row {
-      display:grid;
-      grid-template-columns:minmax(140px,0.85fr) minmax(0,1.15fr);
-      gap:16px;
-      align-items:baseline;
-      min-height:58px;
-      padding:16px 0;
-      border-top:1px solid var(--line);
-    }
+.section p{
+  color:var(--muted);
+  font-size:1rem;
+}
 
-    .artist {
-      color:#fff7ed;
-      font-family:var(--display);
-      font-size:1rem;
-      font-weight:600;
-      letter-spacing:0.01em;
-    }
+/* IMAGES */
+.image-grid{
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:16px;
+}
 
-    .song {
-      color:var(--ink-soft);
-      font-size:0.96rem;
-      line-height:1.45;
-    }
+.image-stack{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  gap:16px;
+  height:460px;
+}
 
-    .no-results {
-      display:none;
-      margin-top:26px;
-      padding:28px;
-      text-align:center;
-      border:1px solid var(--line);
-      border-radius:18px;
-      color:var(--ink-soft);
-      background:var(--card);
-    }
+.image-grid img,
+.image-stack img{
+  width:100%;
+  height:100%;
+  min-height:0;
+  object-fit:cover;
+  border-radius:18px;
+  border:1px solid var(--line);
+}
 
-    .cta {
-      margin-top:64px;
-      padding:34px;
-      border:1px solid var(--accent-line);
-      border-radius:22px;
-      background:linear-gradient(180deg,rgba(224,164,78,0.10),rgba(224,164,78,0.03));
-    }
+.image-grid > img{
+  height:460px;
+}
 
-    .cta h2 {
-      font-family:var(--display);
-      font-size:clamp(1.8rem,4vw,2.5rem);
-      text-transform:uppercase;
-      color:#fffaf2;
-    }
+.image-stack img:first-child{
+  grid-column:1 / -1;
+}
 
-    .cta p {
-      max-width:620px;
-      margin-top:12px;
-      color:var(--ink-soft);
-      line-height:1.7;
-    }
+/* MUSIC */
+.artist-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:22px;
+}
 
-    .cta-actions {
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:24px;
-    }
+.artist-tags span{
+  padding:9px 15px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.035);
+  font-family:var(--display);
+  font-size:.86rem;
+  font-weight:500;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:#e8e0d5;
+}
 
-    .btn {
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:50px;
-      padding:0 24px;
-      border-radius:999px;
-      text-decoration:none;
-      font-family:var(--display);
-      font-size:0.95rem;
-      font-weight:600;
-      letter-spacing:0.04em;
-      text-transform:uppercase;
-    }
+/* ABOUT / EXPERIENCE */
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
 
-    .btn-main { background:#f1eee7; color:#141414; }
+.panel{
+  padding:28px;
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:18px;
+}
 
-    .btn-soft {
-      color:#f3efe7;
-      border:1px solid rgba(255,255,255,0.22);
-      background:rgba(255,255,255,0.05);
-    }
+.panel h3{
+  font-family:var(--display);
+  font-size:1.3rem;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
 
-    .footer {
-      margin-top:36px;
-      color:#8f877d;
-      font-size:0.86rem;
-      line-height:1.6;
-    }
+.venues{
+  list-style:none;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 28px;
+  margin-top:8px;
+}
 
-    @media (max-width:820px) {
-      .song-list { grid-template-columns:1fr; }
-      .letter-group { padding:20px; }
-    }
+.venues li{
+  padding:11px 0;
+  border-bottom:1px solid var(--line);
+  color:#e9e2d8;
+}
 
-    @media (max-width:600px) {
-      .wrapper {
-        width:min(100% - 22px,1120px);
-        padding-top:14px;
-      }
+/* GIGS */
+.gig{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  max-width:640px;
+  padding:20px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:var(--card);
+}
 
-      .topbar { margin-bottom:20px; }
-      .small-booking { display:none; }
-      .hero { padding-bottom:38px; }
+.datebox{
+  width:68px;
+  height:68px;
+  flex:0 0 68px;
+  border-radius:14px;
+  border:1px solid rgba(216,154,61,.35);
+  background:rgba(216,154,61,.09);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
 
-      .banner {
-        margin-bottom:34px;
-        border-radius:16px;
-      }
+.datebox strong{
+  font-family:var(--display);
+  font-size:1.7rem;
+  line-height:1;
+  color:var(--accent);
+}
 
-      .intro {
-        font-size:1rem;
-        line-height:1.72;
-      }
+.datebox span{
+  font-family:var(--display);
+  font-size:.72rem;
+  letter-spacing:.12em;
+  margin-top:3px;
+  color:var(--accent-soft);
+}
 
-      .toolbar {
-        padding:16px;
-        border-radius:16px;
-      }
+.gig strong{
+  display:block;
+  font-family:var(--display);
+  font-size:1.2rem;
+  text-transform:uppercase;
+}
 
-      .search-row {
-        align-items:stretch;
-        flex-direction:column;
-      }
+.gig small{
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
 
-      .count { min-width:0; }
+/* CTA */
+.cta{
+  margin:88px 0 54px;
+  padding:38px;
+  border-radius:22px;
+  border:1px solid rgba(216,154,61,.34);
+  background:
+    linear-gradient(180deg, rgba(216,154,61,.08), rgba(216,154,61,.02)),
+    var(--card);
+}
 
-      .letter-group {
-        margin-top:14px;
-        padding:18px 16px;
-        border-radius:16px;
-      }
+.cta h2{
+  font-family:var(--display);
+  font-size:clamp(2rem,4vw,3rem);
+  text-transform:uppercase;
+  line-height:1;
+}
 
-      .song-row {
-        grid-template-columns:1fr;
-        gap:4px;
-        min-height:0;
-        padding:14px 0;
-      }
+.cta p{
+  margin-top:12px;
+  max-width:680px;
+  color:var(--muted);
+}
 
-      .artist { font-size:1rem; }
-      .song { font-size:0.95rem; }
+.contact-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:26px;
+}
 
-      .cta {
-        margin-top:48px;
-        padding:26px 20px;
-      }
+.socials{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  padding:0 0 42px;
+}
 
-      .cta-actions { flex-direction:column; }
-      .btn { width:100%; }
-    }
+.socials a{
+  color:var(--muted);
+  text-decoration:none;
+  font-family:var(--display);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-size:.88rem;
+}
 
-    @media (prefers-reduced-motion:reduce) {
-      html { scroll-behavior:auto; }
-    }
+.socials a:hover{color:var(--text)}
 
-    .floating-action{
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      z-index:1000;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:50px;
-      padding:0 22px;
-      border-radius:999px;
-      background:var(--accent);
-      color:#17130f;
-      text-decoration:none;
-      font-family:var(--display);
-      font-size:0.92rem;
-      font-weight:700;
-      letter-spacing:0.04em;
-      text-transform:uppercase;
-      border:1px solid rgba(255,255,255,0.18);
-      box-shadow:0 14px 38px rgba(0,0,0,0.42);
-      transition:transform 0.2s ease, filter 0.2s ease;
-    }
+.floating-book{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  z-index:20;
+  background:var(--accent);
+  color:#16110b;
+  text-decoration:none;
+  font-family:var(--display);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  border-radius:999px;
+  padding:14px 20px;
+  box-shadow:0 12px 35px rgba(0,0,0,.4);
+}
 
-    .floating-action:hover{
-      transform:translateY(-2px);
-      filter:brightness(1.06);
-    }
+@media(max-width:900px){
+  .quick{grid-template-columns:repeat(2,1fr)}
+  .image-grid{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+  .image-stack{display:contents}
+  .image-grid > img,
+  .image-stack img{
+    width:100%;
+    height:auto;
+    min-height:0;
+    aspect-ratio:4 / 3;
+    object-fit:cover;
+  }
+  .image-stack img:first-child{grid-column:auto}
+  .two-col{grid-template-columns:1fr}
+}
 
-    @media (max-width:600px){
-      .floating-action{
-        right:12px;
-        bottom:12px;
-        min-height:46px;
-        padding:0 18px;
-        font-size:0.84rem;
-      }
-    }
-  </style>
+@media(max-width:620px){
+  .wrap{width:min(100% - 22px,1160px)}
+  .hero{padding-top:12px}
+  .hero-copy{padding-top:38px}
+  .hero-banner{border-radius:16px}
+  .hero-sub{font-size:1rem}
+  .actions{flex-direction:column}
+  .btn{width:100%}
+  .quick{grid-template-columns:1fr 1fr;gap:10px}
+  .quick-item{padding:16px 14px}
+  .section{padding-top:66px}
+  .venues{grid-template-columns:1fr}
+  .cta{padding:28px 20px;margin-top:70px}
+  .contact-row{flex-direction:column}
+  .floating-book{
+    right:10px;
+    bottom:10px;
+    padding:12px 16px;
+    font-size:.84rem;
+  }
+}
+</style>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 
 <body>
-  <main class="wrapper">
 
-    <div class="topbar">
-      <a class="back-link" href="../" aria-label="Tilbake til forsiden">← Forsiden</a>
-      <a class="small-booking" href="mailto:booking@ronnytrubadur.no?subject=Booking%20av%20Ronny%20Trubadur">Booking</a>
+<main class="wrap">
+
+  <section class="hero">
+    <div class="hero-banner">
+      <img src="banner.PNG" alt="Ronny Trubadur – live musikk" onerror="this.style.display='none'">
     </div>
 
-    <section class="hero">
-      <img src="../banner.PNG" alt="Ronny Trubadur – live musikk" class="banner">
+    <div class="hero-copy">
+      <div class="eyebrow">Trubadur i Trondheim · oppdrag i hele Norge</div>
 
-      <div class="hero-copy">
-        <div class="kicker">Ronny Trubadur</div>
-        <h1>Repertoar</h1>
+      <h1>Trubadur i Trondheim – live musikk til fest og arrangement</h1>
 
-        <p class="intro">
-          Her finner du låtene jeg har med meg på spillejobb. Settene settes sammen etter sted,
-          publikum og type arrangement – fra roligere låter tidlig på kvelden til allsang og mer trøkk når det passer.
-        </p>
-
-        <p class="intro">
-          Har du en låt du gjerne vil ha med, send ønsket på forhånd. Jeg kan ikke love alt,
-          men tar gjerne inn ønsker som passer.
-        </p>
-      </div>
-    </section>
-
-    <section class="toolbar" aria-label="Søk i repertoaret">
-      <label class="search-label" for="song-search">Søk etter artist eller låt</label>
-      <div class="search-row">
-        <input id="song-search" type="search" placeholder="For eksempel Johnny Cash, Åge eller Jolene" autocomplete="off">
-        <div class="count" id="song-count">140 låter</div>
-      </div>
-    </section>
-
-    <nav class="alphabet" aria-label="Hopp til bokstav">
-        <a href="#letter-0-9">0–9</a>
-        <a href="#letter-A">A</a>
-        <a href="#letter-B">B</a>
-        <a href="#letter-C">C</a>
-        <a href="#letter-D">D</a>
-        <a href="#letter-E">E</a>
-        <a href="#letter-F">F</a>
-        <a href="#letter-G">G</a>
-        <a href="#letter-H">H</a>
-        <a href="#letter-J">J</a>
-        <a href="#letter-K">K</a>
-        <a href="#letter-L">L</a>
-        <a href="#letter-M">M</a>
-        <a href="#letter-N">N</a>
-        <a href="#letter-O">O</a>
-        <a href="#letter-P">P</a>
-        <a href="#letter-R">R</a>
-        <a href="#letter-S">S</a>
-        <a href="#letter-T">T</a>
-        <a href="#letter-U">U</a>
-        <a href="#letter-V">V</a>
-        <a href="#letter-W">W</a>
-        <a href="#letter-Å">Å</a>
-    </nav>
-
-    <div id="repertoire">
-      <section class="letter-group" id="letter-0-9">
-        <h2>0–9</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">4 Non Blondes</span><span class="song">What&#x27;s Up?</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-A">
-        <h2>A</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">ABBA</span><span class="song">Dancing Queen</span></div>
-          <div class="song-row"><span class="artist">ABBA</span><span class="song">Waterloo</span></div>
-          <div class="song-row"><span class="artist">Anders Jektvik</span><span class="song">Rampa</span></div>
-          <div class="song-row"><span class="artist">Anne Grete Preus</span><span class="song">Fylt av min kjærlighet</span></div>
-          <div class="song-row"><span class="artist">Anouk</span><span class="song">Lost</span></div>
-          <div class="song-row"><span class="artist">Axel Frønes</span><span class="song">Inst fra mæ</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-B">
-        <h2>B</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Ben E. King</span><span class="song">Stand by Me</span></div>
-          <div class="song-row"><span class="artist">Billy Joel</span><span class="song">Uptown Girl</span></div>
-          <div class="song-row"><span class="artist">Billy Ray Cyrus</span><span class="song">Achy Breaky Heart</span></div>
-          <div class="song-row"><span class="artist">Blink-182</span><span class="song">All the Small Things</span></div>
-          <div class="song-row"><span class="artist">Bob Marley</span><span class="song">Redemption Song</span></div>
-          <div class="song-row"><span class="artist">Bon Jovi</span><span class="song">Bed of Roses</span></div>
-          <div class="song-row"><span class="artist">Bon Jovi</span><span class="song">Livin&#x27; on a Prayer</span></div>
-          <div class="song-row"><span class="artist">Brad Paisley</span><span class="song">Whiskey Lullaby</span></div>
-          <div class="song-row"><span class="artist">Bradley Cooper</span><span class="song">Maybe It&#x27;s Time</span></div>
-          <div class="song-row"><span class="artist">Britney Spears</span><span class="song">...Baby One More Time</span></div>
-          <div class="song-row"><span class="artist">Bruce Springsteen</span><span class="song">Dancing in the Dark</span></div>
-          <div class="song-row"><span class="artist">Bruce Springsteen</span><span class="song">Pay Me My Money Down</span></div>
-          <div class="song-row"><span class="artist">Bryan Adams</span><span class="song">Back to You</span></div>
-          <div class="song-row"><span class="artist">Bryan Adams</span><span class="song">Heaven</span></div>
-          <div class="song-row"><span class="artist">Bryan Adams</span><span class="song">When You&#x27;re Gone</span></div>
-          <div class="song-row"><span class="artist">Buddy Holly</span><span class="song">Rave On</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-C">
-        <h2>C</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Carlene Carter</span><span class="song">Every Little Thing</span></div>
-          <div class="song-row"><span class="artist">Chand Torsvik</span><span class="song">Diamanten</span></div>
-          <div class="song-row"><span class="artist">Chris Stapleton</span><span class="song">Tennessee Whiskey</span></div>
-          <div class="song-row"><span class="artist">Coldplay</span><span class="song">Yellow</span></div>
-          <div class="song-row"><span class="artist">Coolio</span><span class="song">Gangsta&#x27;s Paradise</span></div>
-          <div class="song-row"><span class="artist">Crash Test Dummies</span><span class="song">Mmm Mmm Mmm Mmm</span></div>
-          <div class="song-row"><span class="artist">Creedence Clearwater Revival</span><span class="song">Have You Ever Seen the Rain</span></div>
-          <div class="song-row"><span class="artist">Creedence Clearwater Revival</span><span class="song">Lookin&#x27; Out My Back Door</span></div>
-          <div class="song-row"><span class="artist">Creedence Clearwater Revival</span><span class="song">Proud Mary</span></div>
-          <div class="song-row"><span class="artist">Creedence Clearwater Revival</span><span class="song">Who&#x27;ll Stop the Rain</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-D">
-        <h2>D</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">D.A.D.</span><span class="song">Laugh &#x27;n&#x27; a 1/2</span></div>
-          <div class="song-row"><span class="artist">D.D.E.</span><span class="song">Byn æ bor i</span></div>
-          <div class="song-row"><span class="artist">D.D.E.</span><span class="song">E6</span></div>
-          <div class="song-row"><span class="artist">D.D.E.</span><span class="song">Siste buss har gått</span></div>
-          <div class="song-row"><span class="artist">Dance With a Stranger</span><span class="song">Everyone Needs a Friend</span></div>
-          <div class="song-row"><span class="artist">Di Derre</span><span class="song">Jenter</span></div>
-          <div class="song-row"><span class="artist">Di Derre</span><span class="song">Kråka på taket</span></div>
-          <div class="song-row"><span class="artist">Di Derre</span><span class="song">Rumba med Gunn</span></div>
-          <div class="song-row"><span class="artist">Dire Straits</span><span class="song">Money for Nothing</span></div>
-          <div class="song-row"><span class="artist">Dolly Parton</span><span class="song">9 to 5</span></div>
-          <div class="song-row"><span class="artist">Dolly Parton</span><span class="song">Jolene</span></div>
-          <div class="song-row"><span class="artist">Don Henley</span><span class="song">The Boys of Summer</span></div>
-          <div class="song-row"><span class="artist">DumDum Boys</span><span class="song">Splitter Pine</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-E">
-        <h2>E</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Eagles</span><span class="song">Hotel California</span></div>
-          <div class="song-row"><span class="artist">ELG</span><span class="song">I slekt med måsan</span></div>
-          <div class="song-row"><span class="artist">ELG</span><span class="song">Storm</span></div>
-          <div class="song-row"><span class="artist">Elvis Presley</span><span class="song">Blue Suede Shoes</span></div>
-          <div class="song-row"><span class="artist">Elvis Presley</span><span class="song">If I Can Dream</span></div>
-          <div class="song-row"><span class="artist">Elvis Presley</span><span class="song">Suspicious Minds</span></div>
-          <div class="song-row"><span class="artist">Elvis Presley</span><span class="song">That&#x27;s All Right</span></div>
-          <div class="song-row"><span class="artist">Eric Clapton</span><span class="song">Layla</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-F">
-        <h2>F</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Foo Fighters</span><span class="song">Best of You</span></div>
-          <div class="song-row"><span class="artist">Foo Fighters</span><span class="song">My Hero</span></div>
-          <div class="song-row"><span class="artist">Fool&#x27;s Garden</span><span class="song">Lemon Tree</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-G">
-        <h2>G</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Garth Brooks</span><span class="song">The Dance</span></div>
-          <div class="song-row"><span class="artist">Gasolin&#x27;</span><span class="song">This Is My Life</span></div>
-          <div class="song-row"><span class="artist">George Michael</span><span class="song">Faith</span></div>
-          <div class="song-row"><span class="artist">Goo Goo Dolls</span><span class="song">Iris</span></div>
-          <div class="song-row"><span class="artist">Green Day</span><span class="song">Basket Case</span></div>
-          <div class="song-row"><span class="artist">Green Day</span><span class="song">Good Riddance (Time of Your Life)</span></div>
-          <div class="song-row"><span class="artist">Guns N&#x27; Roses</span><span class="song">Patience</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-H">
-        <h2>H</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Hal Ketchum</span><span class="song">Past the Point of Rescue</span></div>
-          <div class="song-row"><span class="artist">Hellbillies</span><span class="song">Jeg glemmer deg aldri</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-J">
-        <h2>J</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Janis Joplin</span><span class="song">Me and Bobby McGee</span></div>
-          <div class="song-row"><span class="artist">Janis Joplin</span><span class="song">Mercedes Benz</span></div>
-          <div class="song-row"><span class="artist">Jerry Lee Lewis</span><span class="song">Great Balls of Fire</span></div>
-          <div class="song-row"><span class="artist">Joan Osborne</span><span class="song">One of Us</span></div>
-          <div class="song-row"><span class="artist">John Denver</span><span class="song">Take Me Home, Country Roads</span></div>
-          <div class="song-row"><span class="artist">John Fogerty</span><span class="song">Hot Rod Heart</span></div>
-          <div class="song-row"><span class="artist">John Fogerty</span><span class="song">Lodi</span></div>
-          <div class="song-row"><span class="artist">John Fogerty</span><span class="song">Long as I Can See the Light</span></div>
-          <div class="song-row"><span class="artist">Johnny Cash</span><span class="song">Folsom Prison Blues</span></div>
-          <div class="song-row"><span class="artist">Johnny Cash</span><span class="song">Hurt</span></div>
-          <div class="song-row"><span class="artist">Johnny Cash</span><span class="song">Ring of Fire</span></div>
-          <div class="song-row"><span class="artist">Journey</span><span class="song">Don&#x27;t Stop Believin&#x27;</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-K">
-        <h2>K</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">K.M. Myrland</span><span class="song">Æ breinn mett lys i begge einann</span></div>
-          <div class="song-row"><span class="artist">Kenny Loggins</span><span class="song">Footloose</span></div>
-          <div class="song-row"><span class="artist">Kenny Rogers</span><span class="song">The Gambler</span></div>
-          <div class="song-row"><span class="artist">KISS</span><span class="song">Beth</span></div>
-          <div class="song-row"><span class="artist">Knutsen &amp; Ludvigsen</span><span class="song">Dum og deilig</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-L">
-        <h2>L</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Leonard Cohen</span><span class="song">Hallelujah</span></div>
-          <div class="song-row"><span class="artist">Lillebjørn Nilsen</span><span class="song">Tanta til Beate</span></div>
-          <div class="song-row"><span class="artist">Lynni Treekrem</span><span class="song">Veit et sted</span></div>
-          <div class="song-row"><span class="artist">Lynyrd Skynyrd</span><span class="song">Sweet Home Alabama</span></div>
-          <div class="song-row"><span class="artist">Lynyrd Skynyrd</span><span class="song">Tuesday&#x27;s Gone</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-M">
-        <h2>M</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Marius Müller</span><span class="song">Den du veit</span></div>
-          <div class="song-row"><span class="artist">Matchbox</span><span class="song">Rockabilly Rebel</span></div>
-          <div class="song-row"><span class="artist">Metallica</span><span class="song">Nothing Else Matters</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-N">
-        <h2>N</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Nancy Sinatra</span><span class="song">These Boots Are Made for Walkin&#x27;</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-O">
-        <h2>O</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Oasis</span><span class="song">Don&#x27;t Look Back in Anger</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-P">
-        <h2>P</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Pink Floyd</span><span class="song">Mother</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-R">
-        <h2>R</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Radiohead</span><span class="song">Creep</span></div>
-          <div class="song-row"><span class="artist">Ray Charles</span><span class="song">Hit the Road Jack</span></div>
-          <div class="song-row"><span class="artist">Robbie Williams</span><span class="song">Let Me Entertain You</span></div>
-          <div class="song-row"><span class="artist">Roger Miller</span><span class="song">King of the Road</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-S">
-        <h2>S</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Sie Gubba</span><span class="song">Alt du vil ha</span></div>
-          <div class="song-row"><span class="artist">Sie Gubba</span><span class="song">Fjellrypa</span></div>
-          <div class="song-row"><span class="artist">Sie Gubba</span><span class="song">Sånn e livet</span></div>
-          <div class="song-row"><span class="artist">Smokie</span><span class="song">Living Next Door to Alice</span></div>
-          <div class="song-row"><span class="artist">Stage Dolls</span><span class="song">Hard to Say Goodbye</span></div>
-          <div class="song-row"><span class="artist">Stage Dolls</span><span class="song">Soldier&#x27;s Gun</span></div>
-          <div class="song-row"><span class="artist">Steve Miller Band</span><span class="song">The Joker</span></div>
-          <div class="song-row"><span class="artist">Sting</span><span class="song">Englishman in New York</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-T">
-        <h2>T</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Takida</span><span class="song">Master</span></div>
-          <div class="song-row"><span class="artist">Terje Tysland</span><span class="song">Kjærlighetsvise</span></div>
-          <div class="song-row"><span class="artist">The Animals</span><span class="song">House of the Rising Sun</span></div>
-          <div class="song-row"><span class="artist">The Beatles</span><span class="song">I Saw Her Standing There</span></div>
-          <div class="song-row"><span class="artist">The Beatles</span><span class="song">Let It Be</span></div>
-          <div class="song-row"><span class="artist">The Carter Family</span><span class="song">Can the Circle Be Unbroken</span></div>
-          <div class="song-row"><span class="artist">The Connells</span><span class="song">&#x27;74-&#x27;75</span></div>
-          <div class="song-row"><span class="artist">The Dubliners</span><span class="song">Black Velvet Band</span></div>
-          <div class="song-row"><span class="artist">The Dubliners</span><span class="song">Molly Malone</span></div>
-          <div class="song-row"><span class="artist">The Dubliners</span><span class="song">Whiskey in the Jar</span></div>
-          <div class="song-row"><span class="artist">The Highwaymen</span><span class="song">Highwayman</span></div>
-          <div class="song-row"><span class="artist">The Irish Rovers</span><span class="song">The Wild Rover / No Nay Never</span></div>
-          <div class="song-row"><span class="artist">The Mamas &amp; The Papas</span><span class="song">California Dreamin&#x27;</span></div>
-          <div class="song-row"><span class="artist">The Offspring</span><span class="song">Self Esteem</span></div>
-          <div class="song-row"><span class="artist">The Pogues</span><span class="song">Dirty Old Town</span></div>
-          <div class="song-row"><span class="artist">The Rembrandts</span><span class="song">I&#x27;ll Be There for You</span></div>
-          <div class="song-row"><span class="artist">The White Buffalo</span><span class="song">Come Join the Murder</span></div>
-          <div class="song-row"><span class="artist">The White Buffalo</span><span class="song">The Observatory</span></div>
-          <div class="song-row"><span class="artist">Tom Jones</span><span class="song">Delilah</span></div>
-          <div class="song-row"><span class="artist">Tom Jones</span><span class="song">It&#x27;s Not Unusual</span></div>
-          <div class="song-row"><span class="artist">Tom Jones</span><span class="song">Sexbomb</span></div>
-          <div class="song-row"><span class="artist">Too Far Gone</span><span class="song">Bæst i test</span></div>
-          <div class="song-row"><span class="artist">Too Far Gone</span><span class="song">Kainn æ få lov</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-U">
-        <h2>U</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">UB40</span><span class="song">Red Red Wine</span></div>
-          <div class="song-row"><span class="artist">Undertakers Circus</span><span class="song">Nettenes prinsesse</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-V">
-        <h2>V</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Vamp</span><span class="song">Månemannen</span></div>
-          <div class="song-row"><span class="artist">Van Morrison</span><span class="song">Brown Eyed Girl</span></div>
-          <div class="song-row"><span class="artist">Violet Road</span><span class="song">Jericho</span></div>
-          <div class="song-row"><span class="artist">Violet Road</span><span class="song">Skylark</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-W">
-        <h2>W</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Whitesnake</span><span class="song">Here I Go Again</span></div>
-          <div class="song-row"><span class="artist">Willie Nelson</span><span class="song">On the Road Again</span></div>
-        </div>
-      </section>
-
-      <section class="letter-group" id="letter-Å">
-        <h2>Å</h2>
-        <div class="song-list">
-          <div class="song-row"><span class="artist">Åge Aleksandersen</span><span class="song">Fire pils og en pizza</span></div>
-          <div class="song-row"><span class="artist">Åge Aleksandersen</span><span class="song">Leva livet</span></div>
-          <div class="song-row"><span class="artist">Åge Aleksandersen</span><span class="song">Min dag</span></div>
-        </div>
-      </section>
-    </div>
-
-    <div class="no-results" id="no-results">
-      Ingen treff. Prøv artistnavn eller en del av låttittelen.
-    </div>
-
-    <section class="cta">
-      <h2>Har du dato og sted?</h2>
-      <p>
-        Send meg litt informasjon om arrangementet, så svarer jeg på om datoen er ledig
-        og hva opplegget vil koste.
+      <p class="hero-sub">
+        Rock, pop, country, blues og norske favoritter til pub, firmafest, bursdag og private arrangement.
       </p>
 
-      <div class="cta-actions">
-        <a class="btn btn-main" href="mailto:booking@ronnytrubadur.no?subject=Booking%20av%20Ronny%20Trubadur&body=Hei%20Ronny!%0A%0ADato%3A%0ASted%3A%0AType%20arrangement%3A%0A%0AHilsen%3A">
-          Send forespørsel
-        </a>
-        <a class="btn btn-soft" href="../">Tilbake til forsiden</a>
+      <div class="hero-price">
+        3 × 45 min · fra 8 000 kr
       </div>
-    </section>
 
-    <p class="footer">
-      Repertoaret oppdateres fortløpende.
+      <div class="actions">
+        <a class="btn btn-main" href="mailto:booking@ronnytrubadur.no?subject=Booking%20av%20Ronny%20Trubadur&body=Hei%20Ronny!%0A%0ADato%3A%0ASted%3A%0AType%20arrangement%3A%0A%0AHilsen%3A">
+          Sjekk ledig dato
+        </a>
+        <a class="btn btn-soft" href="/repertoar/">Se repertoar</a>
+      </div>
+
+      <div class="quick">
+        <div class="quick-item">
+          <strong>3 × 45 min</strong>
+          <span>Vanlig spilleoppsett</span>
+        </div>
+        <div class="quick-item">
+          <strong>Eget utstyr</strong>
+          <span>Lyd og lys inkludert</span>
+        </div>
+        <div class="quick-item">
+          <strong>Erfaren</strong>
+          <span>God kontakt med publikum</span>
+        </div>
+        <div class="quick-item">
+          <strong>Trondheim</strong>
+          <span>Trøndelag og hele Norge</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="image-grid">
+      <img src="ronny-scene-vegg.jpg" alt="Ronny Trubadur på scene" onerror="this.style.display='none'">
+      <div class="image-stack">
+        <img src="ronny-scene-lys.jpg" alt="Sceneoppsett med lys" loading="lazy" onerror="this.style.display='none'">
+        <img src="ronnyakustisk.jpg" alt="Ronny Trubadur med akustisk gitar" loading="lazy" onerror="this.style.display='none'">
+        <img src="ronny-portrett.jpg" alt="Ronny Trubadur med gitar" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="section-head">
+      <div class="eyebrow">Trondheim & Trøndelag</div>
+      <h2>Trubadur til pub, fest og firmaarrangement</h2>
+      <p style="margin-top:16px">
+        Jeg har base i Trondheim og spiller på puber, firmafester, bursdager og private arrangement i Trondheim og Trøndelag.
+        Jeg tar også oppdrag ellers i Norge når reise og eventuell overnatting avtales på forhånd.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="eyebrow">Musikken</div>
+      <h2>Kjente låter. Live energi. God stemning.</h2>
+      <p style="margin-top:16px">
+        Fra Creedence, Johnny Cash og Springsteen til Åge, D.D.E., CC Cowboys og norske allsangfavoritter.
+      </p>
+    </div>
+    <div class="actions" style="margin-top:22px">
+      <a class="btn btn-soft" href="/repertoar/">Se hele repertoaret</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="two-col">
+      <div class="panel">
+        <div class="eyebrow">Om</div>
+        <h3>Ronny Trubadur</h3>
+        <p>
+          Jeg har mange års erfaring som live-musiker og trubadur. Jeg leser rommet, har god kontakt med publikum
+          og tilpasser låtvalg og energi etter hvordan kvelden utvikler seg.
+        </p>
+      </div>
+
+      <div class="panel">
+        <div class="eyebrow">Booking</div>
+        <h3>Enkelt opplegg</h3>
+        <p>
+          Jeg stiller med eget lyd- og lysutstyr. Vanlig oppsett er 3 × 45 minutter fra 8 000 kr.
+          I Trondheim og Trøndelag avtaler vi sted og tidspunkt; ved lengre reiser avtales reise og eventuell overnatting på forhånd.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div class="eyebrow">Erfaring</div>
+      <h2>Noen steder jeg har spilt</h2>
+    </div>
+
+    <ul class="venues">
+      <li>Røros Alpinsenter</li>
+      <li>Ilsvika Restaurant</li>
+      <li>Kyrksæterøra Restaurant</li>
+      <li>O75, Orkanger</li>
+      <li>Agdeneset</li>
+      <li>Tordenskjold, Kristiansund</li>
+      <li>Land og Strand, Aure</li>
+    </ul>
+  </section>
+<section class="cta">
+    <div class="eyebrow">Booking</div>
+    <h2>Har du dato og sted?</h2>
+    <p>
+      Send meg litt informasjon om arrangementet, så svarer jeg på om datoen er ledig og hva opplegget vil koste.
     </p>
 
-  </main>
+    <p style="margin-top:10px"><a href="mailto:booking@ronnytrubadur.no">booking@ronnytrubadur.no</a></p>
 
-  <script>
-    const searchInput = document.getElementById('song-search');
-    const rows = Array.from(document.querySelectorAll('.song-row'));
-    const groups = Array.from(document.querySelectorAll('.letter-group'));
-    const count = document.getElementById('song-count');
-    const noResults = document.getElementById('no-results');
-    const alphabet = document.querySelector('.alphabet');
+    <div class="contact-row">
+      <a class="btn btn-main" href="mailto:booking@ronnytrubadur.no?subject=Booking%20av%20Ronny%20Trubadur&body=Hei%20Ronny!%0A%0ADato%3A%0ASted%3A%0AType%20arrangement%3A%0A%0AHilsen%3A">
+        Send forespørsel
+      </a>
+      <a class="btn btn-soft" href="https://wa.me/4741357603" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-soft" href="tel:41357603">41 35 76 03</a>
+    </div>
+  </section>
 
-    const normalize = (value) =>
-      value
-        .toLocaleLowerCase('nb-NO')
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '');
+  <div class="socials">
+    <a href="https://www.facebook.com/share/19FKewCNw5/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.tiktok.com/@ronnytrubadur" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://wa.me/4741357603" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
 
-    searchInput.addEventListener('input', () => {
-      const query = normalize(searchInput.value.trim());
-      let visible = 0;
+</main>
 
-      rows.forEach((row) => {
-        const match = normalize(row.textContent).includes(query);
-        row.hidden = !match;
-        if (match) visible++;
-      });
-
-      groups.forEach((group) => {
-        const hasVisibleRows = Array.from(group.querySelectorAll('.song-row'))
-          .some((row) => !row.hidden);
-        group.hidden = !hasVisibleRows;
-      });
-
-      count.textContent = visible === 1 ? '1 låt' : `${visible} låter`;
-      noResults.style.display = visible === 0 ? 'block' : 'none';
-      alphabet.style.display = query ? 'none' : 'flex';
-    });
-  </script>
-
-  <a class="floating-action" href="../" aria-label="Tilbake til forsiden">
-    ← Forsiden
-  </a>
+<a
+  class="floating-book"
+  href="mailto:booking@ronnytrubadur.no?subject=Booking%20av%20Ronny%20Trubadur&body=Hei%20Ronny!%0A%0ADato%3A%0ASted%3A%0AType%20arrangement%3A%0A%0AHilsen%3A"
+>
+  Sjekk ledig dato
+</a>
 
 </body>
 </html>

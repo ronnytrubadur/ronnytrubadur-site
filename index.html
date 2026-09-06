@@ -4,16 +4,21 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Ronny Trubadur | Live musikk i Trondheim og hele Norge</title>
-<meta name="description" content="Ronny Trubadur – live musikk til pub, fest, firma og private arrangement. 3 × 45 min fra 8 000 kr. Base i Trondheim, spiller i hele Norge." />
+<title>Trubadur Trondheim | Live musikk til fest – Ronny Trubadur</title>
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+<meta name="theme-color" content="#0d0d0d" />
+<meta name="description" content="Book Ronny Trubadur i Trondheim og Trøndelag til pub, firmafest, julebord, bursdag og private arrangement. 3 × 45 min fra 8 000 kr. Eget lyd- og lysutstyr." />
 <link rel="canonical" href="https://www.ronnytrubadur.no/" />
 
-<meta property="og:title" content="Ronny Trubadur – live musikk" />
-<meta property="og:description" content="Rock, country, norske klassikere og kjente låter folk synger med på." />
+<meta property="og:title" content="Trubadur Trondheim | Ronny Trubadur" />
+<meta property="og:description" content="Live musikk til pub, firmafest, julebord, bursdag og private arrangement i Trondheim, Trøndelag og resten av Norge." />
 <meta property="og:image" content="https://www.ronnytrubadur.no/banner.PNG" />
 <meta property="og:url" content="https://www.ronnytrubadur.no/" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Trubadur Trondheim | Ronny Trubadur" />
+<meta name="twitter:description" content="Live musikk til fest, pub og arrangement. 3 × 45 min fra 8 000 kr." />
+<meta name="twitter:image" content="https://www.ronnytrubadur.no/banner.PNG" />
 
 <link rel="icon" href="logo.png" />
 
@@ -24,17 +29,63 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "MusicGroup",
-  "name": "Ronny Trubadur",
-  "url": "https://www.ronnytrubadur.no/",
-  "image": "https://www.ronnytrubadur.no/banner.PNG",
-  "genre": ["Rock", "Country", "Norske klassikere"],
-  "description": "Solo trubadur med gitar og vokal. Base i Trondheim og tar oppdrag i hele Norge.",
-  "areaServed": ["Trondheim", "Trøndelag", "Norge"],
-  "telephone": "+4741357603",
-  "sameAs": [
-    "https://www.tiktok.com/@ronnytrubadur",
-    "https://www.facebook.com/share/19FKewCNw5/?mibextid=wwXIfr"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ronnytrubadur.no/#website",
+      "url": "https://www.ronnytrubadur.no/",
+      "name": "Ronny Trubadur",
+      "inLanguage": "nb-NO"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.ronnytrubadur.no/#artist",
+      "name": "Ronny Trubadur",
+      "url": "https://www.ronnytrubadur.no/",
+      "image": "https://www.ronnytrubadur.no/banner.PNG",
+      "jobTitle": "Trubadur og livemusiker",
+      "description": "Trubadur i Trondheim med live musikk til pub, firmafest, julebord, bursdag og private arrangement. Tar oppdrag i Trøndelag og hele Norge.",
+      "telephone": "+4741357603",
+      "email": "booking@ronnytrubadur.no",
+      "sameAs": [
+        "https://www.tiktok.com/@ronnytrubadur",
+        "https://www.facebook.com/share/19FKewCNw5/?mibextid=wwXIfr"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.ronnytrubadur.no/#trubadurservice",
+      "name": "Trubadur i Trondheim – live musikk til fest og arrangement",
+      "serviceType": [
+        "Trubadur",
+        "Live musikk",
+        "Underholdning"
+      ],
+      "provider": {
+        "@id": "https://www.ronnytrubadur.no/#artist"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Trondheim"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Trøndelag"
+        },
+        {
+          "@type": "Country",
+          "name": "Norge"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.ronnytrubadur.no/",
+        "priceCurrency": "NOK",
+        "price": "8000",
+        "description": "Vanlig trubaduroppdrag med 3 × 45 minutter. Reise og eventuell overnatting avtales ved behov."
+      }
+    }
   ]
 }
 </script>
@@ -432,6 +483,42 @@ h1{
   box-shadow:0 12px 35px rgba(0,0,0,.4);
 }
 
+
+/* FAQ / SEO */
+.faq-list{
+  display:grid;
+  gap:12px;
+  max-width:860px;
+}
+.faq-list details{
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:16px;
+  padding:0 20px;
+}
+.faq-list summary{
+  cursor:pointer;
+  list-style:none;
+  padding:18px 0;
+  font-family:var(--display);
+  font-size:1.05rem;
+  font-weight:600;
+  text-transform:uppercase;
+  color:#fff7ed;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list details p{
+  padding:0 0 18px;
+  max-width:760px;
+}
+.contact-email{
+  margin-top:12px;
+}
+.contact-email a{
+  color:var(--accent-soft);
+  text-decoration:none;
+}
+
 @media(max-width:900px){
   .quick{grid-template-columns:repeat(2,1fr)}
   .image-grid{
@@ -482,16 +569,16 @@ h1{
 
   <section class="hero">
     <div class="hero-banner">
-      <img src="banner.PNG" alt="Ronny Trubadur – live musikk" onerror="this.style.display='none'">
+      <img src="banner.PNG" alt="Ronny Trubadur – trubadur og live musikk i Trondheim" fetchpriority="high" decoding="async" onerror="this.style.display='none'">
     </div>
 
     <div class="hero-copy">
-      <div class="eyebrow">Ronny Trubadur · Trondheim</div>
+      <div class="eyebrow">Trubadur i Trondheim · oppdrag i hele Norge</div>
 
-      <h1>Live musikk til pub, fest og arrangement</h1>
+      <h1>Trubadur i Trondheim – live musikk til fest og arrangement</h1>
 
       <p class="hero-sub">
-        Rock, country, norske klassikere og kjente låter folk synger med på.
+        Rock, pop, country, blues og norske favoritter til pub, firmafest, julebord, bursdag og private arrangement.
       </p>
 
       <div class="hero-price">
@@ -519,8 +606,8 @@ h1{
           <span>God kontakt med publikum</span>
         </div>
         <div class="quick-item">
-          <strong>Hele Norge</strong>
-          <span>Base i Trondheim</span>
+          <strong>Trondheim</strong>
+          <span>Trøndelag og hele Norge</span>
         </div>
       </div>
     </div>
@@ -528,12 +615,24 @@ h1{
 
   <section class="section">
     <div class="image-grid">
-      <img src="ronny-scene-vegg.jpg" alt="Ronny Trubadur på scene" onerror="this.style.display='none'">
+      <img src="ronny-scene-vegg.jpg" alt="Ronny Trubadur spiller live på scene i Trondheim" onerror="this.style.display='none'">
       <div class="image-stack">
-        <img src="ronny-scene-lys.jpg" alt="Sceneoppsett med lys" loading="lazy" onerror="this.style.display='none'">
+        <img src="ronny-scene-lys.jpg" alt="Sceneoppsett med lyd og lys for trubadurjobb" loading="lazy" onerror="this.style.display='none'">
         <img src="ronnyakustisk.jpg" alt="Ronny Trubadur med akustisk gitar" loading="lazy" onerror="this.style.display='none'">
-        <img src="ronny-portrett.jpg" alt="Ronny Trubadur med gitar" loading="lazy" onerror="this.style.display='none'">
+        <img src="ronny-portrett.jpg" alt="Ronny Trubadur – trubadur med gitar" loading="lazy" onerror="this.style.display='none'">
       </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="trubadur-trondheim">
+    <div class="section-head">
+      <div class="eyebrow">Trubadur Trondheim</div>
+      <h2>Live musikk i Trondheim og Trøndelag</h2>
+      <p style="margin-top:16px">
+        Jeg spiller solo med gitar og vokal på pub, restaurant, firmafest, julebord, bursdag og private arrangement.
+        Med base i Trondheim tar jeg oppdrag i hele Trøndelag, og ellers i Norge når reise og eventuell overnatting avtales.
+      </p>
     </div>
   </section>
 
@@ -556,8 +655,8 @@ h1{
         <div class="eyebrow">Om</div>
         <h3>Ronny Trubadur</h3>
         <p>
-          Jeg har mange års erfaring fra scene og trives best når det er kontakt mellom musiker og publikum.
-          Jeg leser rommet, tar imot ønsker og tilpasser musikken etter hvordan kvelden utvikler seg.
+          Jeg har mange års erfaring som live-musiker og trubadur. Jeg leser rommet, har god kontakt med publikum
+          og tilpasser låtvalg og energi etter hvordan kvelden utvikler seg.
         </p>
       </div>
 
@@ -565,8 +664,8 @@ h1{
         <div class="eyebrow">Booking</div>
         <h3>Enkelt opplegg</h3>
         <p>
-          Jeg stiller med eget lyd- og lysutstyr. Vanlig oppsett er 3 × 45 minutter fra 8 000 kr.
-          Reise og eventuell overnatting avtales på forhånd.
+          Jeg stiller med eget profesjonelt lyd- og lysutstyr. Vanlig oppsett er 3 × 45 minutter fra 8 000 kr.
+          Reise og eventuell overnatting avtales på forhånd ved oppdrag utenfor nærområdet.
         </p>
       </div>
     </div>
@@ -588,31 +687,13 @@ h1{
       <li>Land og Strand, Aure</li>
     </ul>
   </section>
-
-  <section class="section">
-    <div class="section-head">
-      <div class="eyebrow">Kommende</div>
-      <h2>Spilledatoer</h2>
-    </div>
-
-    <div class="gig">
-      <div class="datebox">
-        <strong>15</strong>
-        <span>AUG</span>
-      </div>
-      <div>
-        <strong>Privat arrangement</strong>
-        <small>Rennebu</small>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
+<section class="cta">
     <div class="eyebrow">Booking</div>
     <h2>Har du dato og sted?</h2>
     <p>
       Send meg litt informasjon om arrangementet, så svarer jeg på om datoen er ledig og hva opplegget vil koste.
     </p>
+    <p class="contact-email"><a href="mailto:booking@ronnytrubadur.no">booking@ronnytrubadur.no</a></p>
 
     <div class="contact-row">
       <a class="btn btn-main" href="mailto:booking@ronnytrubadur.no?subject=Booking%20av%20Ronny%20Trubadur&body=Hei%20Ronny!%0A%0ADato%3A%0ASted%3A%0AType%20arrangement%3A%0A%0AHilsen%3A">

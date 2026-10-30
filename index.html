@@ -7,37 +7,51 @@
 
   <title>Trubadur Trondheim | Ronny Trubadur – Live musikk til fest</title>
 
-  <meta name="description"
-        content="Ronny Trubadur – erfaren trubadur i Trondheim. Live musikk til pub, firmafest, julebord, bursdag og private arrangement. Se repertoar og sjekk ledig dato.">
+  <meta
+    name="description"
+    content="Ronny Trubadur – erfaren trubadur i Trondheim. Live musikk til pub, firmafest, julebord, bursdag og private arrangement. Se repertoar og sjekk ledig dato."
+  >
 
   <meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://www.ronnytrubadur.no/">
+  <link
+    rel="canonical"
+    href="https://www.ronnytrubadur.no/"
+  >
 
   <meta name="theme-color" content="#0E0D0B">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ronny Trubadur | Trubadur i Trondheim">
-  <meta property="og:description"
-        content="Live musikk til pub, fest, firmaarrangement, julebord og private arrangement.">
-  <meta property="og:url" content="https://www.ronnytrubadur.no/">
-  <meta property="og:image"
-        content="https://www.ronnytrubadur.no/ronny-trubadur-header.png">
+  <meta
+    property="og:description"
+    content="Live musikk til pub, fest, firmaarrangement, julebord og private arrangement."
+  >
+  <meta
+    property="og:url"
+    content="https://www.ronnytrubadur.no/"
+  >
+  <meta
+    property="og:image"
+    content="https://www.ronnytrubadur.no/ronny-trubadur-header.png"
+  >
 
-  <!-- Font -->
+  <link rel="icon" href="./logo.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap"
-        rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
-  <!-- Preload hovedbilde -->
-  <link rel="preload"
-        as="image"
-        href="/ronny-trubadur-header.png">
+  <link
+    rel="preload"
+    as="image"
+    href="./ronny-trubadur-header.png"
+  >
 
-  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -70,6 +84,8 @@
     ]
   }
   </script>
+
+  <script defer src="/_vercel/insights/script.js"></script>
 
   <style>
     :root {
@@ -110,13 +126,18 @@
       color: inherit;
     }
 
-    /* -------------------------
-       HEADERBILDE
-    ------------------------- */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* HEADER */
 
     .masthead {
       width: 100%;
-      background: #0a0908;
+      background: #0A0908;
+      overflow: hidden;
     }
 
     .masthead img {
@@ -124,19 +145,18 @@
       height: auto;
     }
 
-    /* -------------------------
-       NAVIGASJON
-    ------------------------- */
+    /* NAV */
 
     .nav-wrap {
-      background: rgba(14, 13, 11, 0.97);
+      position: relative;
+      background: rgba(14, 13, 11, 0.98);
       border-bottom: 1px solid var(--line);
     }
 
     .nav {
       max-width: var(--max-width);
-      margin: 0 auto;
       min-height: 64px;
+      margin: 0 auto;
       padding: 0 24px;
 
       display: flex;
@@ -162,13 +182,12 @@
     }
 
     .nav-links a {
+      color: var(--text-muted);
       font-family: "Oswald", sans-serif;
       font-size: 0.95rem;
       letter-spacing: 0.055em;
       text-transform: uppercase;
       text-decoration: none;
-      color: var(--text-muted);
-      transition: color 0.2s ease;
     }
 
     .nav-links a:hover,
@@ -198,13 +217,7 @@
       background: var(--text);
     }
 
-    /* -------------------------
-       GENERELT
-    ------------------------- */
-
-    main {
-      overflow: hidden;
-    }
+    /* GENERAL */
 
     .container {
       width: min(calc(100% - 40px), var(--max-width));
@@ -224,8 +237,8 @@
       display: block;
       margin-bottom: 12px;
 
-      font-family: "Oswald", sans-serif;
       color: var(--accent);
+      font-family: "Oswald", sans-serif;
       font-size: 0.83rem;
       font-weight: 500;
       letter-spacing: 0.14em;
@@ -233,8 +246,7 @@
     }
 
     h1,
-    h2,
-    h3 {
+    h2 {
       margin-top: 0;
       font-family: "Oswald", sans-serif;
       font-weight: 500;
@@ -245,7 +257,6 @@
     h1 {
       margin-bottom: 18px;
       font-size: clamp(2.6rem, 7vw, 5rem);
-      letter-spacing: -0.015em;
     }
 
     h2 {
@@ -271,7 +282,7 @@
       padding: 12px 23px;
 
       background: var(--accent);
-      color: #17120d;
+      color: #17120D;
 
       border: 1px solid var(--accent);
 
@@ -281,10 +292,6 @@
       letter-spacing: 0.055em;
       text-decoration: none;
       text-transform: uppercase;
-
-      transition:
-        background 0.2s ease,
-        border-color 0.2s ease;
     }
 
     .button:hover,
@@ -299,24 +306,16 @@
       border-color: rgba(243, 235, 221, 0.32);
     }
 
-    .button.secondary:hover,
-    .button.secondary:focus-visible {
+    .button.secondary:hover {
       border-color: var(--text);
-      background: rgba(255, 255, 255, 0.035);
     }
 
-    /* -------------------------
-       INTRO
-    ------------------------- */
+    /* INTRO */
 
     .intro {
       padding-top: 86px;
-      padding-bottom: 72px;
+      padding-bottom: 70px;
       text-align: center;
-    }
-
-    .intro .section-label {
-      margin-bottom: 15px;
     }
 
     .intro h1 {
@@ -328,11 +327,8 @@
     .intro .tagline {
       margin: -4px 0 23px;
 
-      color: var(--text);
       font-family: "Oswald", sans-serif;
       font-size: clamp(1.25rem, 3vw, 1.7rem);
-      font-weight: 400;
-      letter-spacing: 0.015em;
     }
 
     .intro .lead {
@@ -340,9 +336,7 @@
       margin: 0 auto 31px;
     }
 
-    /* -------------------------
-       LIVEBILDE
-    ------------------------- */
+    /* LIVE IMAGE */
 
     .live-photo {
       padding-top: 0;
@@ -358,9 +352,7 @@
       height: auto;
     }
 
-    /* -------------------------
-       SPILLEJOBBER
-    ------------------------- */
+    /* GIGS */
 
     .gigs {
       background: var(--bg-soft);
@@ -389,7 +381,6 @@
     .gig-date {
       font-family: "Oswald", sans-serif;
       font-size: 1.08rem;
-      letter-spacing: 0.025em;
     }
 
     .gig-place {
@@ -401,9 +392,7 @@
       font-size: 0.92rem;
     }
 
-    /* -------------------------
-       REPERTOAR
-    ------------------------- */
+    /* REPERTOIRE */
 
     .repertoire-copy {
       max-width: 760px;
@@ -419,9 +408,7 @@
       margin-top: 28px;
     }
 
-    /* -------------------------
-       OM RONNY
-    ------------------------- */
+    /* ABOUT */
 
     .about {
       background: var(--bg-soft);
@@ -446,14 +433,12 @@
       color: var(--text-muted);
     }
 
-    .about-copy p strong {
+    .about-copy strong {
       color: var(--text);
       font-weight: 500;
     }
 
-    /* -------------------------
-       BOOKING
-    ------------------------- */
+    /* BOOKING */
 
     .booking {
       text-align: center;
@@ -473,9 +458,8 @@
     }
 
     .price {
-      margin: 0 0 7px;
+      margin-bottom: 7px;
 
-      color: var(--text);
       font-family: "Oswald", sans-serif;
       font-size: 1.65rem;
       font-weight: 500;
@@ -495,25 +479,24 @@
       text-decoration: none;
     }
 
-    .email:hover,
-    .email:focus-visible {
+    .email:hover {
       color: var(--text);
     }
 
-    /* -------------------------
-       FOOTER
-    ------------------------- */
+    /* FOOTER */
 
     footer {
-      border-top: 1px solid var(--line);
       padding: 28px 20px 36px;
-      color: #857b70;
+
+      border-top: 1px solid var(--line);
+
+      color: #857B70;
       text-align: center;
       font-size: 0.84rem;
     }
 
     footer a {
-      color: #a5998b;
+      color: #A5998B;
       text-decoration: none;
     }
 
@@ -521,9 +504,7 @@
       color: var(--text);
     }
 
-    /* -------------------------
-       MOBIL
-    ------------------------- */
+    /* MOBILE */
 
     @media (max-width: 760px) {
 
@@ -538,6 +519,7 @@
 
       .nav-links {
         display: none;
+
         position: absolute;
         top: 58px;
         left: 0;
@@ -574,16 +556,8 @@
       }
 
       .intro {
-        padding-top: 62px;
-        padding-bottom: 53px;
-      }
-
-      .intro h1 {
-        font-size: clamp(2.45rem, 13vw, 3.65rem);
-      }
-
-      .intro .tagline {
-        margin-bottom: 20px;
+        padding-top: 58px;
+        padding-bottom: 52px;
       }
 
       .live-photo {
@@ -627,37 +601,32 @@
       html {
         scroll-behavior: auto;
       }
-
-      *,
-      *::before,
-      *::after {
-        transition: none !important;
-      }
     }
   </style>
 </head>
 
+
 <body>
 
-  <!-- HEADER -->
   <header>
 
     <div class="masthead">
       <img
-        src="/ronny-trubadur-header.png"
-        alt="Ronny Trubadur skrevet på en værslitt murvegg"
-        width="1600"
-        height="900"
+        src="./ronny-trubadur-header.png"
+        alt="Ronny Trubadur"
         fetchpriority="high"
       >
     </div>
 
+
     <div class="nav-wrap">
+
       <nav class="nav" aria-label="Hovedmeny">
 
-        <a class="nav-name" href="/">
+        <a class="nav-name" href="./">
           Ronny Trubadur
         </a>
+
 
         <button
           class="menu-button"
@@ -671,14 +640,32 @@
           <span></span>
         </button>
 
+
         <div class="nav-links" id="nav-links">
-          <a href="#spillejobber">Spillejobber</a>
-          <a href="/repertoar/">Repertoar</a>
-          <a href="#om">Om Ronny</a>
-          <a class="booking-link" href="#booking">Booking</a>
+
+          <a href="#spillejobber">
+            Spillejobber
+          </a>
+
+          <a href="./repertoar/">
+            Repertoar
+          </a>
+
+          <a href="#om">
+            Om Ronny
+          </a>
+
+          <a
+            class="booking-link"
+            href="#booking"
+          >
+            Booking
+          </a>
+
         </div>
 
       </nav>
+
     </div>
 
   </header>
@@ -686,14 +673,18 @@
 
   <main>
 
-    <!-- INTRO -->
+
     <section class="intro">
 
       <div class="narrow">
 
-        <span class="section-label">Ronny Trubadur</span>
+        <span class="section-label">
+          Ronny Trubadur
+        </span>
 
-        <h1>Trubadur i Trondheim</h1>
+        <h1>
+          Trubadur i Trondheim
+        </h1>
 
         <div class="tagline">
           Live musikk til fest og arrangement
@@ -716,17 +707,21 @@
     </section>
 
 
-    <!-- HOVEDBILDE -->
-    <section class="live-photo" aria-label="Ronny Trubadur live">
+    <section
+      class="live-photo"
+      aria-label="Ronny Trubadur live"
+    >
 
       <div class="container">
 
         <figure>
+
           <img
-            src="/ronny-trubadur-live.png"
+            src="./ronny-trubadur-live.png"
             alt="Ronny Trubadur spiller gitar og synger"
             loading="lazy"
           >
+
         </figure>
 
       </div>
@@ -734,19 +729,30 @@
     </section>
 
 
-    <!-- SPILLEJOBBER -->
-    <section class="gigs" id="spillejobber">
+    <section
+      class="gigs"
+      id="spillejobber"
+    >
 
       <div class="container">
 
         <div class="gigs-head">
-          <span class="section-label">På kalenderen</span>
-          <h2>Kommende spillejobber</h2>
+
+          <span class="section-label">
+            På kalenderen
+          </span>
+
+          <h2>
+            Kommende spillejobber
+          </h2>
+
         </div>
+
 
         <div class="gig-list">
 
           <div class="gig">
+
             <div class="gig-date">
               27. november 2026
             </div>
@@ -758,9 +764,12 @@
             <div class="gig-type">
               Privat arrangement
             </div>
+
           </div>
 
+
           <div class="gig">
+
             <div class="gig-date">
               28. februar 2027
             </div>
@@ -772,6 +781,7 @@
             <div class="gig-type">
               Privat arrangement
             </div>
+
           </div>
 
         </div>
@@ -781,16 +791,19 @@
     </section>
 
 
-    <!-- REPERTOAR -->
     <section id="repertoar">
 
       <div class="container">
 
         <div class="repertoire-copy">
 
-          <span class="section-label">Musikken</span>
+          <span class="section-label">
+            Musikken
+          </span>
 
-          <h2>Kjente låter. Ingen fastlåst spilleliste.</h2>
+          <h2>
+            Kjente låter. Ingen fastlåst spilleliste.
+          </h2>
 
           <p>
             Repertoaret går fra rock, pop og country til blues og norske
@@ -799,9 +812,14 @@
           </p>
 
           <div class="repertoire-actions">
-            <a class="button secondary" href="/repertoar/">
+
+            <a
+              class="button secondary"
+              href="./repertoar/"
+            >
               Se hele repertoaret
             </a>
+
           </div>
 
         </div>
@@ -811,26 +829,35 @@
     </section>
 
 
-    <!-- OM -->
-    <section class="about" id="om">
+    <section
+      class="about"
+      id="om"
+    >
 
       <div class="container">
 
         <div class="about-grid">
 
           <div class="about-photo">
+
             <img
-              src="/ronny-trubadur-portrett.png"
+              src="./ronny-trubadur-portrett.png"
               alt="Ronny Trubadur med akustisk gitar"
               loading="lazy"
             >
+
           </div>
+
 
           <div class="about-copy">
 
-            <span class="section-label">Om Ronny</span>
+            <span class="section-label">
+              Om Ronny
+            </span>
 
-            <h2>Musikken må passe rommet.</h2>
+            <h2>
+              Musikken må passe rommet.
+            </h2>
 
             <p>
               Jeg har spilt for mange forskjellige typer publikum og
@@ -840,8 +867,10 @@
             </p>
 
             <p>
-              <strong>Det viktigste for meg er å lese publikum og bygge
-              kvelden derfra.</strong>
+              <strong>
+                Det viktigste for meg er å lese publikum og bygge
+                kvelden derfra.
+              </strong>
             </p>
 
             <p>
@@ -858,14 +887,20 @@
     </section>
 
 
-    <!-- BOOKING -->
-    <section class="booking" id="booking">
+    <section
+      class="booking"
+      id="booking"
+    >
 
       <div class="narrow">
 
-        <span class="section-label">Booking</span>
+        <span class="section-label">
+          Booking
+        </span>
 
-        <h2>Har du et arrangement på gang?</h2>
+        <h2>
+          Har du et arrangement på gang?
+        </h2>
 
         <p class="booking-copy">
           Send dato, sted og litt om arrangementet, så svarer jeg på
@@ -877,7 +912,8 @@
         </div>
 
         <div class="price-note">
-          Standard spillejobb: 3 × 45 min. Reise og eventuell overnatting avtales ved behov.
+          Standard spillejobb: 3 × 45 min. Reise og eventuell
+          overnatting avtales ved behov.
         </div>
 
         <a
@@ -889,7 +925,10 @@
 
         <br>
 
-        <a class="email" href="mailto:booking@ronnytrubadur.no">
+        <a
+          class="email"
+          href="mailto:booking@ronnytrubadur.no"
+        >
           booking@ronnytrubadur.no
         </a>
 
@@ -897,34 +936,64 @@
 
     </section>
 
+
   </main>
 
 
   <footer>
+
     © <span id="year"></span> Ronny Trubadur ·
+
     <a href="mailto:booking@ronnytrubadur.no">
       booking@ronnytrubadur.no
     </a>
+
   </footer>
 
 
   <script>
-    const menuButton = document.querySelector(".menu-button");
-    const navLinks = document.querySelector("#nav-links");
+
+    const menuButton =
+      document.querySelector(".menu-button");
+
+    const navLinks =
+      document.querySelector("#nav-links");
+
 
     menuButton.addEventListener("click", () => {
-      const open = navLinks.classList.toggle("open");
-      menuButton.setAttribute("aria-expanded", open ? "true" : "false");
+
+      const open =
+        navLinks.classList.toggle("open");
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        open ? "true" : "false"
+      );
+
     });
 
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuButton.setAttribute("aria-expanded", "false");
+
+    navLinks
+      .querySelectorAll("a")
+      .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          navLinks.classList.remove("open");
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        });
+
       });
-    });
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
   </script>
 
 </body>

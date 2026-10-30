@@ -33,7 +33,7 @@
   >
   <meta
     property="og:image"
-    content="https://www.ronnytrubadur.no/ronny-trubadur-header.png"
+    content="https://www.ronnytrubadur.no/ronny-trubadur-header.jpg"
   >
 
   <link rel="icon" href="./logo.png">
@@ -49,7 +49,7 @@
   <link
     rel="preload"
     as="image"
-    href="./ronny-trubadur-header.png"
+    href="./ronny-trubadur-header.jpg"
   >
 
   <script type="application/ld+json">
@@ -58,7 +58,7 @@
     "@type": "MusicGroup",
     "name": "Ronny Trubadur",
     "url": "https://www.ronnytrubadur.no/",
-    "image": "https://www.ronnytrubadur.no/ronny-trubadur-portrett.png",
+    "image": "https://www.ronnytrubadur.no/ronny-trubadur-portrett.jpg",
     "email": "booking@ronnytrubadur.no",
     "description": "Erfaren trubadur i Trondheim med live musikk til pub, firmafest, julebord, bursdag og private arrangement.",
     "genre": [
@@ -217,7 +217,7 @@
       background: var(--text);
     }
 
-    /* GENERAL */
+    /* GENERELT */
 
     .container {
       width: min(calc(100% - 40px), var(--max-width));
@@ -292,6 +292,10 @@
       letter-spacing: 0.055em;
       text-decoration: none;
       text-transform: uppercase;
+
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
     }
 
     .button:hover,
@@ -306,8 +310,10 @@
       border-color: rgba(243, 235, 221, 0.32);
     }
 
-    .button.secondary:hover {
+    .button.secondary:hover,
+    .button.secondary:focus-visible {
       border-color: var(--text);
+      background: rgba(255, 255, 255, 0.035);
     }
 
     /* INTRO */
@@ -336,7 +342,7 @@
       margin: 0 auto 31px;
     }
 
-    /* LIVE IMAGE */
+    /* LIVE */
 
     .live-photo {
       padding-top: 0;
@@ -352,7 +358,7 @@
       height: auto;
     }
 
-    /* GIGS */
+    /* SPILLEJOBBER */
 
     .gigs {
       background: var(--bg-soft);
@@ -392,7 +398,7 @@
       font-size: 0.92rem;
     }
 
-    /* REPERTOIRE */
+    /* REPERTOAR */
 
     .repertoire-copy {
       max-width: 760px;
@@ -408,7 +414,7 @@
       margin-top: 28px;
     }
 
-    /* ABOUT */
+    /* OM */
 
     .about {
       background: var(--bg-soft);
@@ -487,9 +493,7 @@
 
     footer {
       padding: 28px 20px 36px;
-
       border-top: 1px solid var(--line);
-
       color: #857B70;
       text-align: center;
       font-size: 0.84rem;
@@ -504,7 +508,7 @@
       color: var(--text);
     }
 
-    /* MOBILE */
+    /* MOBIL */
 
     @media (max-width: 760px) {
 
@@ -560,6 +564,10 @@
         padding-bottom: 52px;
       }
 
+      .intro h1 {
+        font-size: clamp(2.45rem, 13vw, 3.65rem);
+      }
+
       .live-photo {
         padding-bottom: 58px;
       }
@@ -601,10 +609,15 @@
       html {
         scroll-behavior: auto;
       }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
     }
   </style>
 </head>
-
 
 <body>
 
@@ -612,21 +625,19 @@
 
     <div class="masthead">
       <img
-        src="./ronny-trubadur-header.png"
+        src="ronny-trubadur-header.jpg"
         alt="Ronny Trubadur"
         fetchpriority="high"
       >
     </div>
 
-
     <div class="nav-wrap">
 
       <nav class="nav" aria-label="Hovedmeny">
 
-        <a class="nav-name" href="./">
+        <a class="nav-name" href="/">
           Ronny Trubadur
         </a>
-
 
         <button
           class="menu-button"
@@ -640,14 +651,13 @@
           <span></span>
         </button>
 
-
         <div class="nav-links" id="nav-links">
 
           <a href="#spillejobber">
             Spillejobber
           </a>
 
-          <a href="./repertoar/">
+          <a href="/repertoar/">
             Repertoar
           </a>
 
@@ -672,7 +682,6 @@
 
 
   <main>
-
 
     <section class="intro">
 
@@ -717,7 +726,7 @@
         <figure>
 
           <img
-            src="./ronny-trubadur-live.png"
+            src="ronny-trubadur-live.jpg"
             alt="Ronny Trubadur spiller gitar og synger"
             loading="lazy"
           >
@@ -747,7 +756,6 @@
           </h2>
 
         </div>
-
 
         <div class="gig-list">
 
@@ -815,7 +823,7 @@
 
             <a
               class="button secondary"
-              href="./repertoar/"
+              href="/repertoar/"
             >
               Se hele repertoaret
             </a>
@@ -841,13 +849,12 @@
           <div class="about-photo">
 
             <img
-              src="./ronny-trubadur-portrett.png"
+              src="ronny-trubadur-portrett.jpg"
               alt="Ronny Trubadur med akustisk gitar"
               loading="lazy"
             >
 
           </div>
-
 
           <div class="about-copy">
 
@@ -936,7 +943,6 @@
 
     </section>
 
-
   </main>
 
 
@@ -952,48 +958,31 @@
 
 
   <script>
-
-    const menuButton =
-      document.querySelector(".menu-button");
-
-    const navLinks =
-      document.querySelector("#nav-links");
-
+    const menuButton = document.querySelector(".menu-button");
+    const navLinks = document.querySelector("#nav-links");
 
     menuButton.addEventListener("click", () => {
-
-      const open =
-        navLinks.classList.toggle("open");
+      const open = navLinks.classList.toggle("open");
 
       menuButton.setAttribute(
         "aria-expanded",
         open ? "true" : "false"
       );
-
     });
 
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
 
-    navLinks
-      .querySelectorAll("a")
-      .forEach(link => {
-
-        link.addEventListener("click", () => {
-
-          navLinks.classList.remove("open");
-
-          menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-
-        });
-
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
       });
-
+    });
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
-
   </script>
 
 </body>
